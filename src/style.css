@@ -61,6 +61,17 @@ section {
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    position: relative;
+}
+
+figure {
+    width: 24px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
 }
 
 form {
@@ -83,6 +94,14 @@ fieldset {
 }
 
 select {
+    width: 60%;
+}
+
+input {
+    margin-right: 1em;
+}
+
+input[type="text"] {
     width: 60%;
 }
 
