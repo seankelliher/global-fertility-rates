@@ -2,6 +2,7 @@
 import { ref, onMounted } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
 
+const showAvgs = ref(false);
 
 const africa = ref([null]);
 const southAsia = ref([null]);
@@ -63,7 +64,20 @@ function findAverages(nat) {
 
 <template>
     <section>
-        <div class="display">
+        <figure
+            v-if="showAvgs !== false"
+            @click="showAvgs = false"
+        >
+            <img src="/images/close-icon-24.svg" alt="close icon">
+        </figure>
+        <form>
+            <fieldset>
+            <legend tabindex="0">Regional averages</legend>
+            <input type="checkbox" id="show-avgs" value="true" v-model="showAvgs">
+            <label for="show-avgs">Show averages</label>
+        </fieldset>
+        </form>
+        <div v-if="showAvgs === true" class="display">
             <h2>Average births per woman in each region</h2>
             <dl>          
                 <dd>Africa: {{ findAverages(africa) }}</dd>

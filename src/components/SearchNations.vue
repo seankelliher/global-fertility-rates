@@ -9,10 +9,16 @@ const searchTerm = ref("");
 
 <template>
     <section>
+        <figure
+            v-if="searchTerm !== ''"
+            @click="searchTerm = ''"
+        >
+            <img src="/images/close-icon-24.svg" alt="close icon">
+        </figure>
         <form>
             <fieldset>
-                <legend tabindex="0">All nations - searchable by name</legend>
-                <input v-model="searchTerm" placeholder="eg, Morocco" />
+                <legend tabindex="0">Nations - search all by name</legend>
+                <input type="text" v-model="searchTerm" placeholder="eg, Morocco" />
         </fieldset>
         </form>
 

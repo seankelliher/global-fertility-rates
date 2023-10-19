@@ -23,16 +23,22 @@ onMounted(() => {
 
 <template>
     <section>
+        <figure
+            v-if="rates !== 'Choose one'"
+            @click="rates = 'Choose one'"
+        >
+            <img src="/images/close-icon-24.svg" alt="close icon">
+        </figure>
         <form>
             <fieldset>
-            <legend tabindex="0">Nations - ten highest, lowest</legend>
-            <select v-model="rates">
-                <!--<option disabled value="">Please select one</option>-->
-                <option>Choose one</option>
-                <option>Lowest</option>
-                <option>Highest</option>
-            </select>
-        </fieldset>
+                <legend tabindex="0">Nations - ten highest, lowest</legend>
+                <select v-model="rates">
+                    <!--<option disabled value="">Please select one</option>-->
+                    <option>Choose one</option>
+                    <option>Lowest</option>
+                    <option>Highest</option>
+                </select>
+            </fieldset>
         </form>
 
         <div v-if="rates === 'Lowest'" class="display">

@@ -9,6 +9,12 @@ const regions = ref("Choose a region");
 
 <template>
     <section>
+        <figure
+            v-if="regions !== 'Choose a region'"
+            @click="regions = 'Choose a region'"
+        >
+            <img src="/images/close-icon-24.svg" alt="close icon">
+        </figure>
         <form>
             <fieldset>
                 <legend tabindex="0">World regions</legend>
