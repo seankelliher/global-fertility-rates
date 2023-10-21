@@ -6,7 +6,7 @@ const showAll = ref(false);
 </script>
 
 <template>
-    <section>
+    <section class="box-for-stats">
         <figure
             v-if="showAll !== false"
             @click="showAll = false"

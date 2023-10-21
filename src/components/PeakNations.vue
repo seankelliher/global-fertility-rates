@@ -22,7 +22,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section>
+    <section class="box-for-stats">
         <figure
             v-if="rates !== 'Choose one'"
             @click="rates = 'Choose one'"

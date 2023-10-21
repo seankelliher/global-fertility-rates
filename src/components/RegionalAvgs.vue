@@ -63,7 +63,7 @@ function findAverages(nat) {
 </script>
 
 <template>
-    <section>
+    <section class="box-for-stats">
         <figure
             v-if="showAvgs !== false"
             @click="showAvgs = false"

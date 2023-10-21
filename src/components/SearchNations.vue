@@ -8,7 +8,7 @@ const searchTerm = ref("");
 </script>
 
 <template>
-    <section>
+    <section class="box-for-stats">
         <figure
             v-if="searchTerm !== ''"
             @click="searchTerm = ''"

@@ -8,7 +8,7 @@ const regions = ref("Choose a region");
 </script>
 
 <template>
-    <section>
+    <section class="box-for-stats">
         <figure
             v-if="regions !== 'Choose a region'"
             @click="regions = 'Choose a region'"
