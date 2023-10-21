@@ -1,6 +1,7 @@
 <script setup>
 import HeaderPart from "./components/HeaderPart.vue";
 import AboutMethods from "./components/AboutMethods.vue";
+import WorldMap from "./components/WorldMap.vue";
 import PeakNations from "./components/PeakNations.vue";
 import SearchNations from "./components/SearchNations.vue";
 import AllNations from "./components/AllNations.vue";
@@ -14,6 +15,7 @@ import RegionalAvgs from "./components/RegionalAvgs.vue";
         <main>
             <div class="overview">
                 <AboutMethods />
+                <WorldMap />
             </div>
             <div class="statistics">
                 <PeakNations  />
