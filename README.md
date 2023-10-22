@@ -10,7 +10,7 @@ This project is in development.
 ## Project Screen Shots
 
 * Draft view - what project looks like so far.
-![screen shot of project](/screenshots/global-fertility-rates1.png?s=600)
+![screen shot of project](/screenshots/global-fertility-rates-screenshot1.png?s=600)
 
 ## Installation and Setup Instructions
 
