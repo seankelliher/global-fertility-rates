@@ -36,65 +36,53 @@ onMounted(() => {
 
             if (nation["tfr"] === "na" ) {
                 color = "#fff"; // white
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] === 0 ) {
                 color = "#fff"; // 95 blue
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] < 1.5 ) {
                 color = "#e9f1ff"; // 95 blue
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] >= 1.5 && nation["tfr"] < 2 ) {
                 color = "#d0e4ff"; // 90 blue
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] >= 2 && nation["tfr"] < 2.5 ) {
                 color = "#9ccaff"; // 80 blue
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] >= 2.5 && nation["tfr"] < 3 ) {
                 color = "#6bb0f6"; // 70 blue
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] >= 3 && nation["tfr"] < 3.5 ) {
                 color = "#4e95d9"; // 60 blue
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] >= 3.5 && nation["tfr"] < 4 ) {
                 color = "#ffdcc0"; // 90 amber
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] >= 4 && nation["tfr"] < 4.5 ) {
                 color = "#ffb874"; // 80 amber
-                matchExpression.push(nation["code"], color);
             }
 
             if (nation["tfr"] >= 4.5 && nation["tfr"] < 5 ) {
                 color = "#ec9840"; // 70 amber
-                matchExpression.push(nation["code"], color);
             }
             if (nation["tfr"] >= 5 && nation["tfr"] < 5.5) {
                 color = "#ffb4ab"; // 80 red
-                matchExpression.push(nation["code"], color);
             }
             if (nation["tfr"] >= 5.5 && nation["tfr"] < 6) {
                 color = "#ff897d"; // 70 red
-                matchExpression.push(nation["code"], color);
             }
             if (nation["tfr"] >= 6) {
                 color = "#ff5449"; // 60 red
-                matchExpression.push(nation["code"], color);
             }
+            matchExpression.push(nation["code"], color);
         }
 
         // Last value is the default, used where there is no data
@@ -138,6 +126,68 @@ onUnmounted(() => {
 <template>
     <section class="box-for-map">
         <div ref="mapContainer" class="map-container"></div>
+        <div class="legend">
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#fff" stroke="#bdbdbd">
+                    <title>no births or map data</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#e9f1ff">
+                    <title>under 1.5 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#d0e4ff">
+                    <title>1.5 - 1.9 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#9ccaff">
+                    <title>2 - 2.4 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#6bb0f6">
+                    <title>2.5 - 2.9 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#4e95d9">
+                    <title>3 - 3.4 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#ffdcc0">
+                    <title>3.5 - 3.9 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#ffb874">
+                    <title>4 - 4.4 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#ec9840">
+                    <title>4.5 - 4.9 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#ffb4ab">
+                    <title>5 - 5.4 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#ff897d">
+                    <title>5.5 - 5.9 tfr</title>
+                </rect>
+            </svg>
+            <svg>
+                <rect width="1.5em" height="1.5em" fill="#ff5449">
+                    <title>6 or higher tfr</title>
+                </rect>
+            </svg>
+        </div>
     </section>
 </template>
 
