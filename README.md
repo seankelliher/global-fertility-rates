@@ -5,11 +5,12 @@ IN DEVELOPMENT: Interactive lists, fertility rates around the globe.
 
 ## Project Status
 
-This project is in development. There is nothing to see yet.
+This project is in development.
 
 ## Project Screen Shots
 
-Screen shots to come.
+* Draft view - what project looks like so far.
+![screen shot of project](/screenshots/global-fertility-rates1.png?s=600)
 
 ## Installation and Setup Instructions
 
