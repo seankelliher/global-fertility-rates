@@ -1,10 +1,19 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
 
 // Form variables.
 const regions = ref("Choose a region");
 
+// Adds bottom-border to form when user chooses option, results displayed.
+watch(regions, (newValue, oldValue) => {
+    const form = document.getElementById("all-regions");
+    if (newValue === "Choose a region") {
+        form.classList.remove("bor-bot");
+    } else if (oldValue === "Choose a region") {
+        form.classList.add("bor-bot");
+    }
+});
 </script>
 
 <template>
@@ -15,7 +24,7 @@ const regions = ref("Choose a region");
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
-        <form>
+        <form id="all-regions">
             <fieldset>
                 <legend tabindex="0">World regions</legend>
                 <select v-model="regions">

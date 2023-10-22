@@ -1,9 +1,19 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
 
-// Search term.
+// Form variables.
 const searchTerm = ref("");
+
+// Adds bottom-border to form when user chooses option, results displayed.
+watch(searchTerm, (newValue, oldValue) => {
+    const form = document.getElementById("search-nations");
+    if (newValue === "") {
+        form.classList.remove("bor-bot");
+    } else if (oldValue === "") {
+        form.classList.add("bor-bot");
+    }
+});
 
 </script>
 
@@ -15,7 +25,7 @@ const searchTerm = ref("");
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
-        <form>
+        <form id="search-nations">
             <fieldset>
                 <legend tabindex="0">Nations - search all by name</legend>
                 <input type="text" v-model="searchTerm" placeholder="eg, Morocco" />

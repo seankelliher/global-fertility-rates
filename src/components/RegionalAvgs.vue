@@ -1,9 +1,11 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
 
+// Form variables.
 const showAvgs = ref(false);
 
+// Variables for regions.
 const africa = ref([null]);
 const southAsia = ref([null]);
 const eastSeAsia = ref([null]);
@@ -60,6 +62,16 @@ function findAverages(nat) {
     return (total / nat.length).toFixed(2);
 }
 
+// Adds bottom-border to form when user chooses option, results displayed.
+watch(showAvgs, (newValue, oldValue) => {
+    const form = document.getElementById("avgs-regions");
+    if (newValue === false) {
+        form.classList.remove("bor-bot");
+    } else if (oldValue === false) {
+        form.classList.add("bor-bot");
+    }
+});
+
 </script>
 
 <template>
@@ -70,7 +82,7 @@ function findAverages(nat) {
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
-        <form>
+        <form id="avgs-regions">
             <fieldset>
             <legend tabindex="0">Regional averages</legend>
             <input type="checkbox" id="show-avgs" value="true" v-model="showAvgs">

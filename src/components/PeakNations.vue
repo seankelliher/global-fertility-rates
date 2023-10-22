@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
 
 // Form variables.
@@ -19,6 +19,16 @@ onMounted(() => {
         }
     });
 });
+
+// Adds bottom-border to form when user chooses option, results displayed.
+watch(rates, (newValue, oldValue) => {
+    const form = document.getElementById("peak-nations");
+    if (newValue === "Choose one") {
+        form.classList.remove("bor-bot");
+    } else if (oldValue === "Choose one") {
+        form.classList.add("bor-bot");
+    }
+});
 </script>
 
 <template>
@@ -29,7 +39,7 @@ onMounted(() => {
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
-        <form>
+        <form id="peak-nations">
             <fieldset>
                 <legend tabindex="0">Nations - ten highest, lowest</legend>
                 <select v-model="rates">
