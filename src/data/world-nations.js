@@ -252,3 +252,5 @@ const nations = [
 
 export { nations };
 
+// Kosovo included in CIA Factbook, but not in ISO codes.
+// West Bank included in CIA Factbook, but not in ISO codes.
