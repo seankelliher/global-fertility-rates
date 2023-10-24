@@ -128,62 +128,62 @@ onUnmounted(() => {
         <div ref="mapContainer" class="map-container"></div>
         <div class="legend">
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#fff" stroke="#bdbdbd">
+                <rect width="1.4em" height="1.4em" fill="#fff" stroke="#bdbdbd">
                     <title>no births or map data</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#e9f1ff">
+                <rect width="1.4em" height="1.4em" fill="#e9f1ff">
                     <title>under 1.5 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#d0e4ff">
+                <rect width="1.4em" height="1.4em" fill="#d0e4ff">
                     <title>1.5 - 1.9 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#9ccaff">
+                <rect width="1.4em" height="1.4em" fill="#9ccaff">
                     <title>2 - 2.4 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#6bb0f6">
+                <rect width="1.4em" height="1.4em" fill="#6bb0f6">
                     <title>2.5 - 2.9 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#4e95d9">
+                <rect width="1.4em" height="1.4em" fill="#4e95d9">
                     <title>3 - 3.4 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#ffdcc0">
+                <rect width="1.4em" height="1.4em" fill="#ffdcc0">
                     <title>3.5 - 3.9 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#ffb874">
+                <rect width="1.4em" height="1.4em" fill="#ffb874">
                     <title>4 - 4.4 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#ec9840">
+                <rect width="1.4em" height="1.4em" fill="#ec9840">
                     <title>4.5 - 4.9 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#ffb4ab">
+                <rect width="1.4em" height="1.4em" fill="#ffb4ab">
                     <title>5 - 5.4 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#ff897d">
+                <rect width="1.4em" height="1.4em" fill="#ff897d">
                     <title>5.5 - 5.9 tfr</title>
                 </rect>
             </svg>
             <svg>
-                <rect width="1.5em" height="1.5em" fill="#ff5449">
+                <rect width="1.4em" height="1.4em" fill="#ff5449">
                     <title>6 or higher tfr</title>
                 </rect>
             </svg>
