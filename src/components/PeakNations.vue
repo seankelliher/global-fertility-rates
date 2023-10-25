@@ -52,7 +52,7 @@ watch(rates, (newValue, oldValue) => {
         </form>
 
         <div v-if="rates === 'Lowest'" class="display">
-            <h2>{{ rates }} births per woman nations</h2>
+            <h3>{{ rates }} births per woman nations</h3>
             <dl>
             <template v-for="nation in nations.slice().reverse()" :key="nation.slug">
                  <dd v-if="lowRates.includes(nation.slug)">
@@ -63,7 +63,7 @@ watch(rates, (newValue, oldValue) => {
         </div>
 
         <div v-if="rates === 'Highest'" class="display">
-            <h2>{{ rates }} births per woman nations</h2>
+            <h3>{{ rates }} births per woman nations</h3>
             <dl>
             <template v-for="nation in nations" :key="nation.slug">
                 <dd v-if="highRates.includes(nation.slug)">

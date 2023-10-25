@@ -31,7 +31,7 @@ watch(showAll, (newValue, oldValue) => {
         </fieldset>
         </form>
         <div v-if="showAll === true" class="display">
-            <h2>Births per woman in all nations, high to low</h2>
+            <h3>Births per woman in all nations, high to low</h3>
             <dl>
                 <template v-for="(nation, index) in nations" :key="nation.slug">
                      <dd>

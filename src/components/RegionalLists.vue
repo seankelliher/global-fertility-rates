@@ -45,7 +45,7 @@ watch(regions, (newValue, oldValue) => {
         </form>
 
         <div v-if="regions !== 'Choose a region'" class="display">
-            <h2>Births per woman in {{ regions }}</h2>
+            <h3>Births per woman in {{ regions }}</h3>
                 <dl>
                 <template v-for="nation in nations" :key="nation.slug">
                      <dd v-if="nation.region === regions">

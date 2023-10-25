@@ -90,7 +90,7 @@ watch(showAvgs, (newValue, oldValue) => {
         </fieldset>
         </form>
         <div v-if="showAvgs === true" class="display">
-            <h2>Average births per woman in each region</h2>
+            <h3>Average births per woman in each region</h3>
             <dl>          
                 <dd>Africa: {{ findAverages(africa) }}</dd>
                 <dd>South Asia: {{ findAverages(southAsia) }}</dd>
