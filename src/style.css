@@ -5,7 +5,6 @@
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    /*justify-content: flex-start;*/ /* main axis */
     align-items: flex-start; /* cross axis */
 }
 
@@ -22,7 +21,6 @@
 }
 
 header {
-    /*width: 90%;*/
     margin: 0;
     padding: 0 5%;
     flex: initial;
@@ -65,29 +63,24 @@ main {
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    /*justify-content: space-between;*/
     align-items: flex-start;
 }
 
 .overview {
-    /*width: 50%;*/
     margin: 0;
     padding: 0;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    /*justify-content: flex-start;*/
     align-items: flex-start;
 }
 
 .statistics {
-    /*width: 50%;*/
     margin: 0;
     padding: 0;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    /*justify-content: flex-end;*/
     align-items: flex-start;
 }
 
@@ -123,23 +116,8 @@ main {
     }
 }
 
-/*section {
-    width: 80%;
-    margin: 1em 0;
-    padding: 0 5%;
-    background: #e9f1ff;
-    border-radius: 8px;
-    flex: initial;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: relative;
-}*/
-
 /* Class for section - What is TFR? */
 .box-for-intro {
-    /*width: 80%;*/
     margin: 1em 0;
     padding: 0 5%;
     background: #e9f1ff;
@@ -183,7 +161,6 @@ main {
 
 /* Class for section - Maxbox map */
 .box-for-map {
-    /*width: 90%;*/
     margin: 1em 0;
     padding: 0;
     flex: initial;
@@ -250,7 +227,6 @@ svg {
 
 /* Class for section - expandable containers for statistics */
 .box-for-stats {
-    /*width: 80%;*/
     margin: 1em 0;
     padding: 0 5%;
     background: #e9f1ff;
@@ -363,6 +339,13 @@ h2 {
     color: #001d35;
 }
 
+h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #001d35;
+}
+
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
@@ -443,6 +426,10 @@ input::placeholder {
         font-size: 1em; /* 16px */
     }
 
+    h3 {
+        font-size: 0.875em; /* 14px */
+    }
+
     legend {
         font-size: 0.875em; /* 14px */
     }
@@ -467,6 +454,10 @@ input::placeholder {
 
     h2 {
         font-size: 1.0625em; /* 17px */
+    }
+
+    h3 {
+        font-size: 0.9375em; /* 15px */
     }
 
     legend {
@@ -495,6 +486,10 @@ input::placeholder {
         font-size: 1.125em; /* 18 px */
     }
 
+    h3 {
+        font-size: 1em; /* 16px */
+    }
+
     legend {
         font-size: 1em; /* 16px */
     }
@@ -519,6 +514,10 @@ input::placeholder {
 
     h2 {
         font-size: 1.1875em; /* 19px */
+    }
+
+    h3 {
+        font-size: 1.0625em; /* 17px */
     }
 
     legend {
