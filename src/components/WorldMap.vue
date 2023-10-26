@@ -4,7 +4,7 @@ import mapboxgl from "mapbox-gl";
 import  {nations} from "../data/world-nations.js";
 
 // Read only, restricted to requests from single URL.
-mapboxgl.accessToken = "ADD-ACCESS-TOKEN";
+mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvNmhzZjVsMGlhaDJybDA0bWtqY3V0ZiJ9.q8WPvwDCqNfUhfsfJjaEQg";
 
 let map = ref(null);
 const mapContainer = ref(null);
