@@ -1,11 +1,11 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/global-fertility-rates?style=flat-square)](/LICENSE.txt)
 ## Global Fertility Rates
 
-IN DEVELOPMENT: Interactive lists, fertility rates around the globe.
+IN DEVELOPMENT: Interactive lists and map on global fertility rates, built with Vue.js and Mapbox. [View working component](https://sean-kelliher-global-fertility-rates.netlify.app).
 
 ## Project Status
 
-This project is in development.
+Doing accessibility and browser testing.
 
 ## Project Screen Shots
 
@@ -30,7 +30,7 @@ Visit the localhost port displayed in the terminal after running `npm run dev`.
 
 ## Reflection
 
-Reflection to come.
+My goal was to build a component to show variances in fertility rates around the world. I choose to show the highest and lowest rate nations, all nations from high to low, and rates by world regions. I built a number of lists as well as an interactive Mapbox globe with shading to show the rate in each nation.
 
 ## Acknowledgments
 
