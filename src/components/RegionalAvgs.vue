@@ -52,11 +52,6 @@ onMounted(() => {
     });
 });
 
-/*const africaAvg = computed((x) => {
-    const total = x.value.reduce((p,c) => p + c);
-    return (total / x.value.length).toFixed(2);
-});*/
-
 function findAverages(nat) {
     const total = nat.reduce((p,c) => p + c);
     return (total / nat.length).toFixed(2);

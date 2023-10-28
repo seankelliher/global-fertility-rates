@@ -90,7 +90,7 @@ onMounted(() => {
 
 
         // The mapbox.country-boundaries-v1 tileset includes multiple polygons for some
-        // countries with disputed borders.  The following expression filters the
+        // countries with disputed borders. The following expression filters the
         // map view to show the "US" perspective of borders for disputed countries.
         // Other world views are available, for more details, see the documentation
         // on the "worldview" feature property at

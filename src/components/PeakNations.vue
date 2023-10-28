@@ -43,7 +43,6 @@ watch(rates, (newValue, oldValue) => {
             <fieldset>
                 <legend tabindex="0">Nations - ten highest, lowest</legend>
                 <select v-model="rates">
-                    <!--<option disabled value="">Please select one</option>-->
                     <option>Choose one</option>
                     <option>Lowest</option>
                     <option>Highest</option>

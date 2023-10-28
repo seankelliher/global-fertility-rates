@@ -28,7 +28,6 @@ watch(regions, (newValue, oldValue) => {
             <fieldset>
                 <legend tabindex="0">World regions</legend>
                 <select v-model="regions">
-                    <!--<option disabled value="">Please select one</option>-->
                     <option>Choose a region</option>
                     <option>Africa</option>
                     <option>South Asia</option>
