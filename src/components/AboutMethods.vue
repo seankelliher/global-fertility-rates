@@ -2,9 +2,8 @@
 </script>
 
 <template>
-    <section class="box-for-intro">
-        <h2>What is a Total Fertility Rate?</h2>
-        <p>Total Fertility Rate or TFR compares figures for the average number of children that would be born per woman if all women lived to the end of their childbearing years and bore children according to a given fertility rate at each age. TFR is a more direct measure of the level of fertility than the crude birth rate, since it refers to births per woman.</p>
+    <section class="colored-box">
+        <p><strong>This map uses Total Fertility Rate</strong>, the average number of children that would be born per woman if all women lived to the end of their childbearing years and bore children according to a given fertility rate at each age.</p>
     </section>
 </template>
 
