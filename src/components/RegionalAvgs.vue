@@ -2,9 +2,6 @@
 import { ref, onMounted } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
 
-// Form variables.
-//const showAvgs = ref(false);
-
 // Variables for regions.
 const africa = ref([null]);
 const southAsia = ref([null]);
@@ -61,7 +58,6 @@ function findAverages(nat) {
 
 <template>
     <section class="colored-box">
-        <!--<p><strong>Average births per woman in each region</strong></p>-->
         <dl>
             <dt>Average births per woman in each region</dt>     
             <dd>Africa: {{ findAverages(africa) }}</dd>

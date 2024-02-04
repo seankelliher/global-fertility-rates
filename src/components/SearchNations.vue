@@ -5,7 +5,7 @@ import { nations } from "../data/world-fertility-rates.js";
 // Form variables.
 const searchTerm = ref("");
 
-// Adds bottom-border to form when user chooses option, results displayed.
+// Adds bottom-border to form when user searches.
 watch(searchTerm, (newValue, oldValue) => {
     const form = document.getElementById("search-nations");
     if (newValue === "") {

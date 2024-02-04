@@ -93,8 +93,8 @@ onMounted(() => {
         const WORLDVIEW = "US";
         const worldview_filter = [ "all", [ "==", ["get", "disputed"], "false" ], [ "any", [ "==", "all", ["get", "worldview"] ], [ "in", WORLDVIEW, ["get", "worldview"] ] ] ];
 
-        // Add layer from the vector tile source to create the choropleth.
-        // Insert it below the "admin-1-boundary-bg" layer in the style.
+        // Add layer of joined nations to create choropleth.
+        // Insert it below the "admin-1-boundary-bg" layer.
         map.value.addLayer(
             {
                 "id": "countries-join",
@@ -127,12 +127,12 @@ onMounted(() => {
                 .addTo(map.value);
         });
 
-        // Change cursor from "hand" to "hand with pointed finger" over nation.
+        // Over a nation, change cursor from "hand" to "pointed finger".
         map.value.on("mouseenter", "countries-join", () => {
             map.value.getCanvas().style.cursor = "pointer";
         });
          
-        // Change cursor "hand" when not over nation.
+        // Return cursor to "hand" when not over a nation.
         map.value.on("mouseleave", "countries-join", () => {
             map.value.getCanvas().style.cursor = "";
         });

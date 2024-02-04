@@ -1,10 +1,10 @@
 <script setup>
 import HeaderPart from "./components/HeaderPart.vue";
-import AboutMethods from "./components/AboutMethods.vue";
 import WorldMap from "./components/WorldMap.vue";
+import AboutMethods from "./components/AboutMethods.vue";
 import SearchNations from "./components/SearchNations.vue";
-import AllNations from "./components/AllNations.vue";
 import RegionalAvgs from "./components/RegionalAvgs.vue";
+import AllNations from "./components/AllNations.vue";
 </script>
 
 <template>

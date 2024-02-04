@@ -32,6 +32,43 @@ header {
     flex: initial;
 }
 
+/* Container for Mapbox map */
+.box-for-map {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;  /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+.map-container {
+    width: 100%;
+    height: 38em;
+    margin: 0;
+    padding: 0;
+    flex: initial;
+}
+
+.map-legend {
+    width: 100%;
+    max-width: 560px;
+    margin: 0;
+    padding: 0.5em 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;  /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+svg {
+    width: 1.4em;
+    height: 1.4em;
+}
+
 main {
     width: 90%;
     margin: 0;
@@ -133,43 +170,6 @@ main {
     .colored-box {
         width: 80%;
     }
-}
-
-/* Container for Mapbox map */
-.box-for-map {
-    width: 90%;
-    margin: 0;
-    padding: 0 5%;
-    flex: initial;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;  /* main axis */
-    align-items: flex-start; /* cross axis */
-}
-
-.map-container {
-    width: 100%;
-    height: 38em;
-    margin: 0;
-    padding: 0;
-    flex: initial;
-}
-
-.map-legend {
-    width: 100%;
-    max-width: 560px;
-    margin: 0;
-    padding: 0.5em 0;
-    flex: initial;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;  /* main axis */
-    align-items: flex-start; /* cross axis */
-}
-
-svg {
-    width: 1.4em;
-    height: 1.4em;
 }
 
 figure {

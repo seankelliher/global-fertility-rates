@@ -4,7 +4,7 @@ import {ref, watch } from "vue";
 
 const showAll = ref(false);
 
-// Adds bottom-border to form when user chooses option, results displayed.
+// Adds bottom-border to form when user checks checkbox.
 watch(showAll, (newValue, oldValue) => {
     const form = document.getElementById("all-nations");
     if (newValue === false) {
