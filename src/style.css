@@ -1,4 +1,8 @@
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
+body {
+    background: #fdfcff;
+}
+
 #container {
     width: 100%;
     max-width: 1280px;
@@ -22,39 +26,10 @@
 }
 
 header {
+    width: 90%;
     margin: 0;
     padding: 0 5%;
     flex: initial;
-}
-
-@media (min-width: 300px) and (max-width: 599px) {
-    header {
-        width: 90%;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 699px) {
-    header {
-        width: 80%;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 799px) {
-    header {
-        width: 70%;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 1099px) {
-    header {
-        width: 60%;
-    }
-}
-
-@media (min-width: 1100px) {
-    header {
-        width: 90%;
-    }
 }
 
 main {
@@ -67,7 +42,7 @@ main {
     align-items: flex-start; /* cross axis */
 }
 
-.overview {
+.about-search {
     margin: 0;
     padding: 0;
     flex: initial;
@@ -90,7 +65,7 @@ main {
         justify-content: center;  /* main axis */
     }
 
-    .overview {
+    .about-search {
         width: 100%;
         justify-content: center;  /* main axis */
     }
@@ -106,7 +81,7 @@ main {
         justify-content: space-between;  /* main axis */
     }
 
-    .overview {
+    .about-search {
         width: 50%;
         justify-content: flex-start;  /* main axis */
     }
@@ -117,88 +92,59 @@ main {
     }
 }
 
-/* Class for section - What is TFR? */
-.box-for-intro {
+.colored-box {
     margin: 1em 0;
-    padding: 0 5%;
-    background: #e9f1ff;
+    padding: 0.5em 5%;
+    background: #edf1f9;
     border-radius: 8px;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;  /* main axis */
     align-items: flex-start; /* cross axis */
+    position: relative;
 }
 
 @media (min-width: 300px) and (max-width: 599px) {
-    .box-for-intro {
+    .colored-box {
         width: 90%;
     }
 }
 
 @media (min-width: 600px) and (max-width: 699px) {
-    .box-for-intro {
+    .colored-box {
         width: 80%;
     }
 }
 
 @media (min-width: 700px) and (max-width: 799px) {
-    .box-for-intro {
+    .colored-box {
         width: 70%;
     }
 }
 
 @media (min-width: 800px) and (max-width: 1099px) {
-    .box-for-intro {
+    .colored-box {
         width: 60%;
     }
 }
 
 @media (min-width: 1100px) {
-    .box-for-intro {
+    .colored-box {
         width: 80%;
     }
 }
 
-/* Class for section - Maxbox map */
+/* Container for Mapbox map */
 .box-for-map {
-    margin: 1em 0;
-    padding: 0;
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;  /* main axis */
     align-items: flex-start; /* cross axis */
-}
-
-@media (min-width: 300px) and (max-width: 599px) {
-    .box-for-map {
-        width: 100%;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 699px) {
-    .box-for-map {
-        width: 90%;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 799px) {
-    .box-for-map {
-        width: 80%;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 1099px) {
-    .box-for-map {
-        width: 70%;
-    }
-}
-
-@media (min-width: 1100px) {
-    .box-for-map {
-        width: 90%;
-    }
 }
 
 .map-container {
@@ -209,7 +155,7 @@ main {
     flex: initial;
 }
 
-.legend {
+.map-legend {
     width: 100%;
     max-width: 560px;
     margin: 0;
@@ -224,50 +170,6 @@ main {
 svg {
     width: 1.4em;
     height: 1.4em;
-}
-
-/* Class for section - expandable containers for statistics */
-.box-for-stats {
-    margin: 1em 0;
-    padding: 0 5%;
-    background: #e9f1ff;
-    border-radius: 8px;
-    flex: initial;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;  /* main axis */
-    align-items: flex-start; /* cross axis */
-    position: relative;
-}
-
-@media (min-width: 300px) and (max-width: 599px) {
-    .box-for-stats {
-        width: 90%;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 699px) {
-    .box-for-stats {
-        width: 80%;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 799px) {
-    .box-for-stats {
-        width: 70%;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 1099px) {
-    .box-for-stats {
-        width: 60%;
-    }
-}
-
-@media (min-width: 1100px) {
-    .box-for-stats {
-        width: 80%;
-    }
 }
 
 figure {
@@ -292,7 +194,7 @@ form {
 }
 
 .bor-bot {
-    border-bottom: 1px solid #d0e4ff;
+    border-bottom: 1px solid #c2c7cf;
 }
 
 fieldset {
@@ -303,19 +205,16 @@ fieldset {
     border: none;
 }
 
-select {
-    width: 60%;
-}
-
 input {
     margin-right: 1em;
+    margin-bottom: 0.5em;
 }
 
 input[type="text"] {
     width: 60%;
 }
 
-/* Container inside section .box-for-stats */
+/* Container inside .box-for-stats */
 .display {
     width: 100%;
     max-height: 25em;
@@ -329,77 +228,47 @@ input[type="text"] {
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 600;
     color: #1a1c1e;
-}
-
-h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 500;
-    color: #001d35;
-}
-
-h3 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 500;
-    color: #001d35;
 }
 
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 400;
-    margin-top: 0.25em;
-    color: #001d35;
-}
-
-#no-results {
-    color: #ba1a1a;
-}
-
-dl {
-    margin-top: 0;
+    color: #42474e;
 }
 
 dt {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 500;
-    color: #001d35;
-}
-
-dd {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 2;
-    font-weight: 400;
-    color: #1a1c1e;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #42474e;
     margin: 0;
     padding: 0;
 }
 
-dd a {
-    color: #006492;
-    text-decoration: none;
-}
-
-dd a:hover {
-    text-decoration: underline;
+dd {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #42474e;
+    margin: 0;
+    padding: 0;
 }
 
 legend {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    font-weight: 400;
-    color: #001d35;
+    font-weight: 600;
+    color: #42474e;
 }
 
-label, select, input[type="text"] {
+label, input[type="text"] {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color: #1a1c1e;
+    color: #42474e;
 }
 
 input::placeholder {
@@ -411,121 +280,41 @@ input::placeholder {
 
 /* Media queries for fonts */
 @media (min-width: 300px) and (max-width: 399px) {
-    p {
+    p, legend, label, input::placeholder, input[type="text"], dt, dd {
         font-size: 0.875em; /* 14px */
-    }
-
-    dt, dd {
-        font-size: 0.8125em; /* 13px */
     }
 
     h1 {
         font-size: 1.125em; /* 18 px */
     }
-
-    h2 {
-        font-size: 1em; /* 16px */
-    }
-
-    h3 {
-        font-size: 0.875em; /* 14px */
-    }
-
-    legend {
-        font-size: 0.875em; /* 14px */
-    }
-
-    label, select, input::placeholder, input[type="text"], button {
-        font-size: 0.875em; /* 14px */
-    }
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
-    p {
+    p, legend, label, input::placeholder, input[type="text"], dt, dd {
         font-size: 0.9375em; /* 15px */
-    }
-
-    dt, dd {
-        font-size: 0.875em; /* 14px */
     }
 
     h1 {
         font-size: 1.1875em; /* 19px */
     }
-
-    h2 {
-        font-size: 1.0625em; /* 17px */
-    }
-
-    h3 {
-        font-size: 0.9375em; /* 15px */
-    }
-
-    legend {
-        font-size: 0.9375em; /* 15px */
-    }
-
-    label, select, input::placeholder, input[type="text"], button {
-        font-size: 0.9375em; /* 15px */
-    }
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
-    p {
+    p, legend, label, input::placeholder, input[type="text"], dt, dd {
         font-size: 1em; /* 16px */
-    }
-
-    dt, dd {
-        font-size: 0.9375em; /* 15px */
     }
 
     h1 {
         font-size: 1.25em; /* 20px */
     }
-
-    h2 {
-        font-size: 1.125em; /* 18 px */
-    }
-
-    h3 {
-        font-size: 1em; /* 16px */
-    }
-
-    legend {
-        font-size: 1em; /* 16px */
-    }
-
-    label, select, input::placeholder, input[type="text"], button {
-        font-size: 1em; /* 16px */
-    }
 }
 
 @media (min-width: 600px) {
-    p {
+    p, legend, label, input::placeholder, input[type="text"], dt, dd {
         font-size: 1.0625em; /* 17px */
-    }
-
-    dt, dd {
-        font-size: 1em; /* 16px */
     }
 
     h1 {
         font-size: 1.3125em; /* 21px */
-    }
-
-    h2 {
-        font-size: 1.1875em; /* 19px */
-    }
-
-    h3 {
-        font-size: 1.0625em; /* 17px */
-    }
-
-    legend {
-        font-size: 1.0625em; /* 17px */
-    }
-
-    label, select, input::placeholder, input[type="text"], button {
-        font-size: 1.0625em; /* 17px */
     }
 }
