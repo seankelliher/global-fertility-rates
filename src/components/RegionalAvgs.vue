@@ -1,9 +1,9 @@
 <script setup>
-import { ref, onMounted, watch } from "vue";
+import { ref, onMounted } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
 
 // Form variables.
-const showAvgs = ref(false);
+//const showAvgs = ref(false);
 
 // Variables for regions.
 const africa = ref([null]);
@@ -57,48 +57,24 @@ function findAverages(nat) {
     return (total / nat.length).toFixed(2);
 }
 
-// Adds bottom-border to form when user chooses option, results displayed.
-watch(showAvgs, (newValue, oldValue) => {
-    const form = document.getElementById("avgs-regions");
-    if (newValue === false) {
-        form.classList.remove("bor-bot");
-    } else if (oldValue === false) {
-        form.classList.add("bor-bot");
-    }
-});
-
 </script>
 
 <template>
-    <section class="box-for-stats">
-        <figure
-            v-if="showAvgs !== false"
-            @click="showAvgs = false"
-        >
-            <img src="/images/close-icon-24.svg" alt="close icon">
-        </figure>
-        <form id="avgs-regions">
-            <fieldset>
-            <legend tabindex="0">Regional averages</legend>
-            <input type="checkbox" id="show-avgs" value="true" v-model="showAvgs">
-            <label for="show-avgs">Show averages</label>
-        </fieldset>
-        </form>
-        <div v-if="showAvgs === true" class="display">
-            <h3>Average births per woman in each region</h3>
-            <dl>          
-                <dd>Africa: {{ findAverages(africa) }}</dd>
-                <dd>South Asia: {{ findAverages(southAsia) }}</dd>
-                <dd>East and Southeast Asia: {{ findAverages(eastSeAsia) }}</dd>
-                <dd>Middle East: {{ findAverages(middleEast) }}</dd>
-                <dd>Australia and Oceania: {{ findAverages(ausOceania) }}</dd>
-                <dd>Central America and the Caribbean: {{ findAverages(cenAmerCarib) }}</dd>
-                <dd>Central Asia: {{ findAverages(cenAsia) }}</dd>
-                <dd>Europe: {{ findAverages(europe) }}</dd>
-                <dd>South America: {{ findAverages(southAmer) }}</dd>
-                <dd>North America: {{ findAverages(northAmer) }}</dd>
-            </dl>
-        </div>
+    <section class="colored-box">
+        <!--<p><strong>Average births per woman in each region</strong></p>-->
+        <dl>
+            <dt>Average births per woman in each region</dt>     
+            <dd>Africa: {{ findAverages(africa) }}</dd>
+            <dd>South Asia: {{ findAverages(southAsia) }}</dd>
+            <dd>East and Southeast Asia: {{ findAverages(eastSeAsia) }}</dd>
+            <dd>Middle East: {{ findAverages(middleEast) }}</dd>
+            <dd>Australia and Oceania: {{ findAverages(ausOceania) }}</dd>
+            <dd>Central America and the Caribbean: {{ findAverages(cenAmerCarib) }}</dd>
+            <dd>Central Asia: {{ findAverages(cenAsia) }}</dd>
+            <dd>Europe: {{ findAverages(europe) }}</dd>
+            <dd>South America: {{ findAverages(southAmer) }}</dd>
+            <dd>North America: {{ findAverages(northAmer) }}</dd>
+        </dl>
     </section>
 </template>
 
