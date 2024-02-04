@@ -16,23 +16,25 @@ watch(showAll, (newValue, oldValue) => {
 </script>
 
 <template>
-    <section class="box-for-stats">
+    <section class="colored-box">
         <figure
+            tabindex="0"
             v-if="showAll !== false"
             @click="showAll = false"
+            @keydown.enter="showAll = false"
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
         <form id="all-nations">
             <fieldset>
-            <legend tabindex="0">Nations - show all 227 nations</legend>
+            <legend tabindex="0">All 227 nations</legend>
             <input type="checkbox" id="show-all" value="true" v-model="showAll">
-            <label for="show-all">Show all</label>
+            <label for="show-all">Show list</label>
         </fieldset>
         </form>
         <div v-if="showAll === true" class="display">
-            <h3>Births per woman in all nations, high to low</h3>
             <dl>
+                <dt>Births per woman in all nations, high to low</dt>
                 <template v-for="(nation, index) in nations" :key="nation.slug">
                      <dd>
                         {{ index + 1}}. {{ nation.name }}: {{ nation.rate }}
