@@ -9,7 +9,7 @@ defineProps({
 
 <template>
     <header>
-        <h1>Total fertiliy rates across the globe</h1>
+        <h1>{{ headline }}</h1>
     </header>
 </template>
 
