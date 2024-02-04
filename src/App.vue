@@ -2,27 +2,23 @@
 import HeaderPart from "./components/HeaderPart.vue";
 import AboutMethods from "./components/AboutMethods.vue";
 import WorldMap from "./components/WorldMap.vue";
-import PeakNations from "./components/PeakNations.vue";
 import SearchNations from "./components/SearchNations.vue";
 import AllNations from "./components/AllNations.vue";
-import RegionalLists from "./components/RegionalLists.vue";
 import RegionalAvgs from "./components/RegionalAvgs.vue";
 </script>
 
 <template>
     <div id="container">
-        <HeaderPart headline="Fertiliy rates across the globe" />
+        <HeaderPart headline="Global Fertility Rates" />
+        <WorldMap />
         <main>
-            <div class="overview">
+            <div class="about-search">
                 <AboutMethods />
-                <WorldMap />
+                <SearchNations />
             </div>
             <div class="statistics">
-                <PeakNations  />
-                <SearchNations />
-                <AllNations />
-                <RegionalLists />
                 <RegionalAvgs />
+                <AllNations />
             </div>
         </main>
     </div>
