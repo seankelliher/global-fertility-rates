@@ -1,7 +1,7 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/global-fertility-rates?style=flat-square)](/LICENSE.txt)
 ## Global Fertility Rates
 
-Interactive lists and map of fertility rates, built with Vue.js and Mapbox. [View working component](https://sean-kelliher-global-fertility-rates.netlify.app).
+Interactive lists and map of global fertility rates, built with Vue.js and Mapbox. [View working component](https://sean-kelliher-global-fertility-rates.netlify.app).
 
 ## Project Status
 
@@ -30,12 +30,12 @@ Visit the localhost port displayed in the terminal after running `npm run dev`.
 
 ## Reflection
 
-My goal was to build a component to show variances in fertility rates around the world. I choose to show the highest and lowest rate nations, all nations from high to low, and rates by world regions. I built a number of lists as well as an interactive Mapbox globe with shading to show the rate in each nation.
+My goal was to build a component that displays fertility rates in nations around the world. With Mapbox, I created a choropleth map of the world with pop-ups for each nation. Click the nation, a pop-up window appears displaying the nation's name and fertility rate. To supplement the map, I added a search bar so users can "look up" the rate of individual nations. I also added a list that displays average fertility rates in each world region, and a list that displays all 227 nations, from high to low. The largest challenge was trying to fully understand Mapbox. It's a complex product, with many features, and vast documentation.
 
 ## Acknowledgments
 
 * Fertility data from the CIA's [World Factbook](https://www.cia.gov/the-world-factbook/field/total-fertility-rate/country-comparison/).
 * Readme guidance from [Brenna Martenson](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4).
-* Design guidance from Google's [Material Design](https://material.io/design) and [Adobe Color](https://color.adobe.com/trends).
+* Design guidance from Google's [Material Design](https://material.io/design).
 * Linting guidance from [ESLint](https://eslint.org) and [Stylelint](https://stylelint.io).
 * Shields from [Shields](https://shields.io).
