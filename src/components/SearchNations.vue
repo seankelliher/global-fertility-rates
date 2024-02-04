@@ -18,16 +18,18 @@ watch(searchTerm, (newValue, oldValue) => {
 </script>
 
 <template>
-    <section class="box-for-stats">
+    <section class="colored-box">
         <figure
+            tabindex="0"
             v-if="searchTerm !== ''"
             @click="searchTerm = ''"
+            @keydown.enter="searchTerm = ''"
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
         <form id="search-nations">
             <fieldset>
-                <legend tabindex="0">Nations - search all by name</legend>
+                <legend tabindex="0">Search nations</legend>
                 <input type="text" v-model="searchTerm" placeholder="eg, Morocco" />
         </fieldset>
         </form>
