@@ -12,13 +12,13 @@ import AllNations from "./components/AllNations.vue";
         <HeaderPart headline="Global Fertility Rates" />
         <WorldMap />
         <main>
-            <div class="about-search">
+            <div class="about">
                 <AboutMethods />
-                <SearchNations />
             </div>
             <div class="statistics">
-                <RegionalAvgs />
+                <SearchNations />
                 <AllNations />
+                <RegionalAvgs />
             </div>
         </main>
     </div>
