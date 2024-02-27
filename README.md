@@ -9,7 +9,7 @@ Next steps, I want to do more extensive accessibility and browser testing.
 
 ## Project Screen Shots
 
-* Initial view - larger screens.
+* Default view, but with Australia selected on map.
 ![screen shot of project](/screenshots/global-fertility-rates-screenshot1.png?s=600)
 
 ## Installation and Setup Instructions
