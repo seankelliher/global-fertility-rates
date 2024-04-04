@@ -2,7 +2,7 @@
 import { ref, onMounted, watch } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
 
-const showAll = ref(false);
+const showAllRegions = ref(false);
 
 // Variables for regions.
 const africa = ref([null]);
@@ -57,7 +57,7 @@ function findAverages(nat) {
 }
 
 // Adds bottom-border to form when user checks checkbox.
-watch(showAll, (newValue, oldValue) => {
+watch(showAllRegions, (newValue, oldValue) => {
     const form = document.getElementById("all-regions");
     if (newValue === false) {
         form.classList.remove("bor-bot");
@@ -71,20 +71,20 @@ watch(showAll, (newValue, oldValue) => {
     <section class="colored-box">
         <figure
             tabindex="0"
-            v-if="showAll !== false"
-            @click="showAll = false"
-            @keydown.enter="showAll = false"
+            v-if="showAllRegions !== false"
+            @click="showAllRegions = false"
+            @keydown.enter="showAllRegions = false"
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
         <form id="all-regions">
             <fieldset>
             <legend tabindex="0">All regions</legend>
-            <input type="checkbox" id="show-all" value="true" v-model="showAll">
-            <label for="show-all">view</label>
+            <input type="checkbox" id="show-all-regions" value="true" v-model="showAllRegions">
+            <label for="show-all-regions">view</label>
         </fieldset>
         </form>
-        <div v-if="showAll === true" class="display">
+        <div v-if="showAllRegions === true" class="display">
             <dl>
                 <dd>Africa: {{ findAverages(africa) }}</dd>
                 <dd>South Asia: {{ findAverages(southAsia) }}</dd>

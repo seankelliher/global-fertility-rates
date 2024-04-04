@@ -2,10 +2,10 @@
 import { nations } from "../data/world-fertility-rates.js";
 import {ref, watch } from "vue";
 
-const showAll = ref(false);
+const showAllNations = ref(false);
 
 // Adds bottom-border to form when user checks checkbox.
-watch(showAll, (newValue, oldValue) => {
+watch(showAllNations, (newValue, oldValue) => {
     const form = document.getElementById("all-nations");
     if (newValue === false) {
         form.classList.remove("bor-bot");
@@ -19,20 +19,20 @@ watch(showAll, (newValue, oldValue) => {
     <section class="colored-box">
         <figure
             tabindex="0"
-            v-if="showAll !== false"
-            @click="showAll = false"
-            @keydown.enter="showAll = false"
+            v-if="showAllNations !== false"
+            @click="showAllNations = false"
+            @keydown.enter="showAllNations = false"
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
         <form id="all-nations">
             <fieldset>
             <legend tabindex="0">All nations</legend>
-            <input type="checkbox" id="show-all" value="true" v-model="showAll">
-            <label for="show-all">view</label>
+            <input type="checkbox" id="show-all-nations" value="true" v-model="showAllNations">
+            <label for="show-all-nations">view</label>
         </fieldset>
         </form>
-        <div v-if="showAll === true" class="display">
+        <div v-if="showAllNations === true" class="display">
             <dl>
                 <template v-for="(nation, index) in nations" :key="nation.slug">
                      <dd>
