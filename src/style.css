@@ -27,6 +27,7 @@ body {
 
 header {
     width: 90%;
+    max-width: 660px;
     margin: 0;
     padding: 0 5%;
     flex: initial;
@@ -54,20 +55,73 @@ header {
 
 .map-legend {
     width: 100%;
-    max-width: 560px;
     margin: 0;
     padding: 0.5em 0;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;  /* main axis */
+    justify-content: flex-start;  /* main axis */
     align-items: flex-start; /* cross axis */
 }
 
-svg {
+figure.legend {
+    margin: 0.25em 0;
+    padding: 0;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;  /* main axis */
+    align-items: center; /* cross axis */
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+    figure.legend {
+        width: 33%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    figure.legend {
+        width: 25%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+    figure.legend {
+        width: 20%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    figure.legend {
+        width: 20%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    figure.legend {
+        width: 15%;
+    }
+}
+
+@media (min-width: 1000px) {
+    figure.legend {
+        width: 12%;
+    }
+}
+
+/* for svg in legend */
+.colored-sq {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+}
+
+
+/* svg {
     width: 1.4em;
     height: 1.4em;
-}
+} */
 
 main {
     width: 90%;
@@ -129,6 +183,7 @@ main {
     }
 }
 
+/* Class for section */
 .colored-box {
     margin: 1em 0;
     padding: 0.25em 5%;
@@ -172,7 +227,7 @@ main {
     }
 }
 
-figure {
+figure.icon {
     width: 24px;
     margin: 0;
     padding: 0;
@@ -232,6 +287,13 @@ h1 {
     color: #1a1c1e;
 }
 
+figcaption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #42474e;
+}
+
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
@@ -271,41 +333,61 @@ input::placeholder {
 
 /* Media queries for fonts */
 @media (min-width: 300px) and (max-width: 399px) {
-    p, legend, label, input::placeholder, input[type="text"], dd {
-        font-size: 0.875em; /* 14px */
-    }
-
     h1 {
         font-size: 1.125em; /* 18 px */
     }
+
+    figcaption {
+        font-size: 0.8125em; /* 13px */
+    }
+
+    p, dd, legend, label, input[type="text"], input::placeholder {
+        font-size: 0.875em; /* 14px */
+    }
+
+
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
-    p, legend, label, input::placeholder, input[type="text"], dd {
-        font-size: 0.9375em; /* 15px */
-    }
-
     h1 {
         font-size: 1.1875em; /* 19px */
     }
+
+    figcaption {
+        font-size: 0.875em; /* 14px */ 
+    }
+
+    p, dd, legend, label, input[type="text"], input::placeholder {
+        font-size: 0.9375em; /* 15px */
+    }
+
+
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
-    p, legend, label, input::placeholder, input[type="text"], dd {
-        font-size: 1em; /* 16px */
-    }
-
     h1 {
         font-size: 1.25em; /* 20px */
+    }
+
+    figcaption {
+        font-size: 0.9375em; /* 15px */ 
+    }
+
+    p, dd, legend, label, input[type="text"], input::placeholder {
+        font-size: 1em; /* 16px */
     }
 }
 
 @media (min-width: 600px) {
-    p, legend, label, input::placeholder, input[type="text"], dd {
-        font-size: 1.0625em; /* 17px */
-    }
-
     h1 {
         font-size: 1.3125em; /* 21px */
+    }
+
+    figcaption {
+        font-size: 1em; /* 16px */
+    }
+
+    p, dd, legend, label, input[type="text"], input::placeholder {
+        font-size: 1.0625em; /* 17px */
     }
 }
