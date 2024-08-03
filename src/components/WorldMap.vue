@@ -2,6 +2,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import mapboxgl from "mapbox-gl";
 import  {nations} from "../data/world-nations.js";
+import MapLegend from "./MapLegend.vue";
 
 // Read only, restricted to requests from single URL.
 mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvNmhzZjVsMGlhaDJybDA0bWtqY3V0ZiJ9.q8WPvwDCqNfUhfsfJjaEQg";
@@ -149,68 +150,7 @@ onUnmounted(() => {
 <template>
     <section class="box-for-map">
         <div ref="mapContainer" class="map-container"></div>
-        <div class="map-legend">
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#fff" stroke="#bdbdbd">
-                    <title>no births or map data</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#e9f1ff">
-                    <title>under 1.5 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#d0e4ff">
-                    <title>1.5 - 1.9 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#9ccaff">
-                    <title>2 - 2.4 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#6bb0f6">
-                    <title>2.5 - 2.9 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#4e95d9">
-                    <title>3 - 3.4 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#ffdcc0">
-                    <title>3.5 - 3.9 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#ffb874">
-                    <title>4 - 4.4 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#ec9840">
-                    <title>4.5 - 4.9 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#ffb4ab">
-                    <title>5 - 5.4 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#ff897d">
-                    <title>5.5 - 5.9 tfr</title>
-                </rect>
-            </svg>
-            <svg>
-                <rect width="1.4em" height="1.4em" fill="#ff5449">
-                    <title>6 or higher tfr</title>
-                </rect>
-            </svg>
-        </div>
+        <MapLegend />
     </section>
 </template>
 
