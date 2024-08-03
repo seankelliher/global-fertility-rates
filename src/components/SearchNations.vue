@@ -24,12 +24,13 @@ watch(searchTerm, (newValue, oldValue) => {
             v-if="searchTerm !== ''"
             @click="searchTerm = ''"
             @keydown.enter="searchTerm = ''"
+            class="icon"
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
         <form id="search-nations">
             <fieldset>
-                <legend tabindex="0">Search nations</legend>
+                <legend tabindex="0">Search for rate by nation name</legend>
                 <input type="text" v-model="searchTerm" placeholder="eg, Morocco" />
         </fieldset>
         </form>

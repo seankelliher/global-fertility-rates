@@ -74,14 +74,15 @@ watch(showAllRegions, (newValue, oldValue) => {
             v-if="showAllRegions !== false"
             @click="showAllRegions = false"
             @keydown.enter="showAllRegions = false"
+            class="icon"
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
         <form id="all-regions">
             <fieldset>
-            <legend tabindex="0">All regions</legend>
+            <legend tabindex="0">Rates by region</legend>
             <input type="checkbox" id="show-all-regions" value="true" v-model="showAllRegions">
-            <label for="show-all-regions">view</label>
+            <label for="show-all-regions">view list of regional averages</label>
         </fieldset>
         </form>
         <div v-if="showAllRegions === true" class="display">

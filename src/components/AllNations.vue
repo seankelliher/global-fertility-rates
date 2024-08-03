@@ -22,14 +22,15 @@ watch(showAllNations, (newValue, oldValue) => {
             v-if="showAllNations !== false"
             @click="showAllNations = false"
             @keydown.enter="showAllNations = false"
+            class="icon"
         >
             <img src="/images/close-icon-24.svg" alt="close icon">
         </figure>
         <form id="all-nations">
             <fieldset>
-            <legend tabindex="0">All nations</legend>
+            <legend tabindex="0">Rates by nation</legend>
             <input type="checkbox" id="show-all-nations" value="true" v-model="showAllNations">
-            <label for="show-all-nations">view</label>
+            <label for="show-all-nations">view list of all nations</label>
         </fieldset>
         </form>
         <div v-if="showAllNations === true" class="display">
