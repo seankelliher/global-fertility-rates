@@ -2,8 +2,8 @@
 import HeaderPart from "./components/HeaderPart.vue";
 import WorldMap from "./components/WorldMap.vue";
 import SearchNations from "./components/SearchNations.vue";
-import RegionalAvgs from "./components/RegionalAvgs.vue";
 import AllNations from "./components/AllNations.vue";
+import RegionalAvgs from "./components/RegionalAvgs.vue";
 </script>
 
 <template>

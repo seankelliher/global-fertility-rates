@@ -117,12 +117,6 @@ figure.legend {
     margin-right: 4px;
 }
 
-
-/* svg {
-    width: 1.4em;
-    height: 1.4em;
-} */
-
 main {
     width: 90%;
     margin: 0;
@@ -344,8 +338,6 @@ input::placeholder {
     p, dd, legend, label, input[type="text"], input::placeholder {
         font-size: 0.875em; /* 14px */
     }
-
-
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
@@ -360,8 +352,6 @@ input::placeholder {
     p, dd, legend, label, input[type="text"], input::placeholder {
         font-size: 0.9375em; /* 15px */
     }
-
-
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
