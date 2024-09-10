@@ -1,8 +1,6 @@
 <script setup>
-import { ref, onMounted, watch } from "vue";
+import { ref, onMounted } from "vue";
 import { nations } from "../data/world-fertility-rates.js";
-
-const showAllRegions = ref(false);
 
 // Variables for regions.
 const africa = ref([null]);
@@ -55,50 +53,65 @@ function findAverages(nat) {
     const total = nat.reduce((p,c) => p + c);
     return (total / nat.length).toFixed(2);
 }
-
-// Adds bottom-border to form when user checks checkbox.
-watch(showAllRegions, (newValue, oldValue) => {
-    const form = document.getElementById("all-regions");
-    if (newValue === false) {
-        form.classList.remove("bor-bot");
-    } else if (oldValue === false) {
-        form.classList.add("bor-bot");
-    }
-});
 </script>
 
 <template>
-    <section class="colored-box">
-        <figure
-            tabindex="0"
-            v-if="showAllRegions !== false"
-            @click="showAllRegions = false"
-            @keydown.enter="showAllRegions = false"
-            class="icon"
-        >
-            <img src="/images/close-icon-24.svg" alt="close icon">
-        </figure>
-        <form id="all-regions">
-            <fieldset>
-            <legend tabindex="0">Rates by region</legend>
-            <input type="checkbox" id="show-all-regions" value="true" v-model="showAllRegions">
-            <label for="show-all-regions">view list of regional averages</label>
-        </fieldset>
-        </form>
-        <div v-if="showAllRegions === true" class="display">
-            <dl>
-                <dd>Africa: {{ findAverages(africa) }}</dd>
-                <dd>South Asia: {{ findAverages(southAsia) }}</dd>
-                <dd>East and Southeast Asia: {{ findAverages(eastSeAsia) }}</dd>
-                <dd>Middle East: {{ findAverages(middleEast) }}</dd>
-                <dd>Australia and Oceania: {{ findAverages(ausOceania) }}</dd>
-                <dd>Central America and the Caribbean: {{ findAverages(cenAmerCarib) }}</dd>
-                <dd>Central Asia: {{ findAverages(cenAsia) }}</dd>
-                <dd>Europe: {{ findAverages(europe) }}</dd>
-                <dd>South America: {{ findAverages(southAmer) }}</dd>
-                <dd>North America: {{ findAverages(northAmer) }}</dd>
-            </dl>
+    <section>
+        <div class="title">
+            <div class="title-heading">
+                <h2>Regional Averages</h2>
+            </div>
         </div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="nation-name">Region</th>
+                    <th class="nation-name">Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="nation-name">Africa</td>
+                    <td class="nation-rate">{{ findAverages(africa) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">South Asia</td>
+                    <td class="nation-rate">{{ findAverages(southAsia) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">East and Southeast Asia</td>
+                    <td class="nation-rate">{{ findAverages(eastSeAsia) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">Middle East</td>
+                    <td class="nation-rate">{{ findAverages(middleEast) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">Australia and Oceania</td>
+                    <td class="nation-rate">{{ findAverages(ausOceania) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">Central America and the Caribbean</td>
+                    <td class="nation-rate">{{ findAverages(cenAmerCarib) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">Central Asia</td>
+                    <td class="nation-rate">{{ findAverages(cenAsia) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">Europe</td>
+                    <td class="nation-rate">{{ findAverages(europe) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">South America</td>
+                    <td class="nation-rate">{{ findAverages(southAmer) }}</td>
+                </tr>
+                <tr>
+                    <td class="nation-name">North America</td>
+                    <td class="nation-rate">{{ findAverages(northAmer) }}</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 </template>
 

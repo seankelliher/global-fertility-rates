@@ -1,8 +1,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import mapboxgl from "mapbox-gl";
-import  {nations} from "../data/world-nations.js";
-import MapLegend from "./MapLegend.vue";
+import  { nations } from "../data/world-nations.js";
+import HeaderPart from "./HeaderPart.vue";
+import MapCaption from "./MapCaption.vue";
+import MapNav from "./MapNav.vue";
 
 // Read only, restricted to requests from single URL.
 mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvNmhzZjVsMGlhaDJybDA0bWtqY3V0ZiJ9.q8WPvwDCqNfUhfsfJjaEQg";
@@ -10,16 +12,31 @@ mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvNmhzZjVsMGlhaDJybDA0b
 let map = ref(null);
 const mapContainer = ref(null);
 
+function toggleLayer(layer) {
+    const visibility = map.value.getLayoutProperty(
+        layer,
+        "visibility"
+    );
+    if (visibility === "visible") {
+        map.value.setLayoutProperty(layer, "visibility", "none");
+    } else {
+        map.value.setLayoutProperty(layer, "visibility", "visible");
+    }
+}
+
 onMounted(() => {
+    // Load the map from Mapbox.
     map.value = new mapboxgl.Map({
         container: mapContainer.value,
-        style: "mapbox://styles/mapbox/streets-v11", // v11 flat map, v12 globe.
+        style: "mapbox://styles/mapbox/streets-v11",
         center: [22, 16],
         zoom: 1.6
     });
 
+    // Wait until the map has finished loading.
     map.value.on("load", () => {
-        // Mapbox Countries tileset has polygons for nations.
+        // Add a custom vector tileset source.
+        // In this case, Mapbox's "countries" tileset has polygons for nations.
         // Each polygon has an ISO 3166 alpha-3 code used for joining data.
         // https://docs.mapbox.com/vector-tiles/reference/mapbox-countries-v1
         map.value.addSource("countries", {
@@ -28,89 +45,75 @@ onMounted(() => {
         });
 
         // Using GL match expression give each polygon a color.
-        const matchExpression = ["match", ["get", "iso_3166_1_alpha_3"]];
+        const rateCat1 = ["match", ["get", "iso_3166_1_alpha_3"]]; // <= 2.1
+        const rateCat2 = ["match", ["get", "iso_3166_1_alpha_3"]]; // 2.2 - 2.9
+        const rateCat3 = ["match", ["get", "iso_3166_1_alpha_3"]]; // 3 - 3.9
+        const rateCat4 = ["match", ["get", "iso_3166_1_alpha_3"]]; // 4 - 4.9
+        const rateCat5 = ["match", ["get", "iso_3166_1_alpha_3"]]; // >= 5
+        const rateCat6 = ["match", ["get", "iso_3166_1_alpha_3"]]; // base layer
 
-        for (const nation of nations) {
-            let color;
+        function loopNations(low, high, col, matchVar, layerName, vis) {
+            for (const nation of nations) {
+                let color;
 
-            if (nation["tfr"] === "na" ) {
-                color = "#fff"; // white
+                if (nation["tfr"] > low && nation["tfr"] <= high  ) {
+                    color = `${col}`; // 95 blue
+                } else {
+                    color = "transparent";
+                }
+                matchVar.push(nation["code"], color);
             }
+            // Last value is the default, used where there is no data.
+            matchVar.push("rgba(0, 0, 0, 0)");
 
-            if (nation["tfr"] === 0 ) {
-                color = "#fff"; // white
-            }
+            createMapLayer(matchVar, layerName, vis);
+        }
+        const loops = [
+            [0, 2.19, "#f2f0f7", rateCat1, "countries-join1", "none"],
+            [2.19, 2.99, "#fcae91", rateCat2, "countries-join2", "none"],
+            [2.99, 3.99, "#fb6a4a", rateCat3, "countries-join3", "none"],
+            [3.99, 4.99, "#de2d26", rateCat4, "countries-join4", "none"],
+            [4.99, 15.99, "#a50f15", rateCat5, "countries-join5", "none"], // 15.99 is safe high end.
+            [0, 0, "transparent", rateCat6, "countries-join6", "visible"] // no colors, for pop-ups.
+        ];
 
-            if (nation["tfr"] < 1.5 ) {
-                color = "#e9f1ff"; // 95 blue
-            }
+        loops.forEach((loop) => {
+            loopNations(loop[0], loop[1], loop[2], loop[3], loop[4], loop[5]);
+        });
 
-            if (nation["tfr"] >= 1.5 && nation["tfr"] < 2 ) {
-                color = "#d0e4ff"; // 90 blue
-            }
+        function createMapLayer(matchVar, layerName, vis) {
+            const WORLDVIEW = "US";
+            const worldview_filter = [ "all", [ "==", ["get", "disputed"], "false" ], [ "any", [ "==", "all", ["get", "worldview"] ], [ "in", WORLDVIEW, ["get", "worldview"] ] ] ];
 
-            if (nation["tfr"] >= 2 && nation["tfr"] < 2.5 ) {
-                color = "#9ccaff"; // 80 blue
-            }
-
-            if (nation["tfr"] >= 2.5 && nation["tfr"] < 3 ) {
-                color = "#6bb0f6"; // 70 blue
-            }
-
-            if (nation["tfr"] >= 3 && nation["tfr"] < 3.5 ) {
-                color = "#4e95d9"; // 60 blue
-            }
-
-            if (nation["tfr"] >= 3.5 && nation["tfr"] < 4 ) {
-                color = "#ffdcc0"; // 90 amber
-            }
-
-            if (nation["tfr"] >= 4 && nation["tfr"] < 4.5 ) {
-                color = "#ffb874"; // 80 amber
-            }
-
-            if (nation["tfr"] >= 4.5 && nation["tfr"] < 5 ) {
-                color = "#ec9840"; // 70 amber
-            }
-            if (nation["tfr"] >= 5 && nation["tfr"] < 5.5) {
-                color = "#ffb4ab"; // 80 red
-            }
-            if (nation["tfr"] >= 5.5 && nation["tfr"] < 6) {
-                color = "#ff897d"; // 70 red
-            }
-            if (nation["tfr"] >= 6) {
-                color = "#ff5449"; // 60 red
-            }
-            matchExpression.push(nation["code"], color);
+            // Add layer of joined nations to create choropleth.
+            // Insert it below the "admin-1-boundary-bg" layer.
+            map.value.addLayer(
+                {
+                    "id": `${layerName}`,
+                    "type": "fill",
+                    "source": "countries",
+                    "source-layer": "country_boundaries",
+                    "layout": {
+                        "visibility": `${vis}`
+                    },
+                    "paint": {
+                        "fill-color": matchVar
+                    },
+                    "filter": worldview_filter
+                },
+                "admin-1-boundary-bg"
+            );
         }
 
-        // Last value is the default, used where there is no data.
-        matchExpression.push("rgba(0, 0, 0, 0)");
+        // After the last frame rendered before the map enters an "idle" state.
+        map.value.on("idle", () => {
+            // If these two layers were not added to the map, abort
+            if (!map.value.getLayer("countries-join1") || !map.value.getLayer("countries-join2")) {
+                return;
+            }
+        });
 
-        // mapbox.country-boundaries-v1 tileset includes multiple polygons for
-        // countries with disputed borders. The following expression filters the
-        // map view to show the "US" perspective for disputed borders.
-        // https://docs.mapbox.com/data/tilesets/reference/mapbox-countries-v1/#--polygon---worldview-text
-        const WORLDVIEW = "US";
-        const worldview_filter = [ "all", [ "==", ["get", "disputed"], "false" ], [ "any", [ "==", "all", ["get", "worldview"] ], [ "in", WORLDVIEW, ["get", "worldview"] ] ] ];
-
-        // Add layer of joined nations to create choropleth.
-        // Insert it below the "admin-1-boundary-bg" layer.
-        map.value.addLayer(
-            {
-                "id": "countries-join",
-                "type": "fill",
-                "source": "countries",
-                "source-layer": "country_boundaries",
-                "paint": {
-                    "fill-color": matchExpression
-                },
-                "filter": worldview_filter
-            },
-            "admin-1-boundary-bg"
-        );
-
-        map.value.on("click", "countries-join", (e) => {
+        map.value.on("click", "countries-join6", (e) => {
             let rate;
 
             function getRate(x) {
@@ -129,12 +132,12 @@ onMounted(() => {
         });
 
         // Over a nation, change cursor from "hand" to "pointed finger".
-        map.value.on("mouseenter", "countries-join", () => {
+        map.value.on("mouseenter", "countries-join6", () => {
             map.value.getCanvas().style.cursor = "pointer";
         });
          
         // Return cursor to "hand" when not over a nation.
-        map.value.on("mouseleave", "countries-join", () => {
+        map.value.on("mouseleave", "countries-join6", () => {
             map.value.getCanvas().style.cursor = "";
         });
     });
@@ -148,10 +151,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section class="box-for-map">
+    <div class="box-for-map">
+        <HeaderPart headline="Global Fertility Rates" />
         <div ref="mapContainer" class="map-container"></div>
-        <MapLegend />
-    </section>
+    </div>
+    <MapNav @toggle-layer="toggleLayer" />
+    <MapCaption />
 </template>
 
 <style scoped>
