@@ -5,7 +5,7 @@ Interactive map and lists of fertility rates in 227 nations around the world, ma
 
 ## Project Status
 
-Project meets general accessibility (WACG) and cross-browser requirements. More testing with a dedicated services (e.g., Sauce Labs) would be helpful if deploying to production.
+DOING SOME RENOVATIONS: General layout and functionality are done. To do: (1) Test for bugs and accessibility issues. (2) Write media queries so app is fully-responsive. Currently has some issues on smaller screens.
 
 ## Project Screen Shots
 
@@ -33,5 +33,6 @@ Visit the localhost port displayed in the terminal after running `npm run dev`.
 * Fertility data from the CIA's [World Factbook](https://www.cia.gov/the-world-factbook/field/total-fertility-rate/country-comparison/).
 * Readme guidance from [Brenna Martenson](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4).
 * Design guidance from Google's [Material Design](https://material.io/design).
+* Map shading guidance from [ColorBrewer](https://colorbrewer2.org).
 * Linting guidance from [ESLint](https://eslint.org) and [Stylelint](https://stylelint.io).
 * Shields from [Shields](https://shields.io).
