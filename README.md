@@ -5,7 +5,7 @@ Interactive map and lists of fertility rates in 227 nations around the world, ma
 
 ## Project Status
 
-DOING SOME RENOVATIONS: General layout and functionality are done. To do: (1) Test for bugs and accessibility issues. (2) Write media queries so app is fully-responsive. Currently has some issues on smaller screens.
+**DOING RENOVATIONS: General layout okay on larger screens. Some issues on smaller screens. To do: (1) Write media queries for smaller screens. (2) Test for bugs and accessibility issues. (3) Test for browser issues.**
 
 ## Project Screen Shots
 
