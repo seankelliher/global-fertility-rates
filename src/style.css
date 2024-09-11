@@ -138,6 +138,7 @@ section::before {
     margin: 0;
     padding: 0 1em 0 1em;
     background: #2c6a45; /* P-40 */
+    border-radius: 12px;
     flex: initial;
 }
 
