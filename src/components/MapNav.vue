@@ -20,8 +20,10 @@ function updateDisplay(layer) {
             class="nav-item"
             :class="{selected: displays.includes('countries-join1')}"
             role="button"
+            tabindex="0"
         >
-            <svg class="nav-item-sq">
+            <svg class="nav-item-sq" role="img">
+                <title>colored square, light gray</title>
                 <rect width="24px" height="24px" fill="#f2f0f7"></rect>
             </svg>
             <figcaption>2.1 and under</figcaption>
@@ -31,8 +33,10 @@ function updateDisplay(layer) {
             class="nav-item"
             :class="{selected: displays.includes('countries-join2')}"
             role="button"
+            tabindex="0"
         >
-            <svg class="nav-item-sq">
+            <svg class="nav-item-sq" role="img">
+                <title>colored square, peach</title>
                 <rect width="24px" height="24px" fill="#fcae91"></rect>
             </svg>
             <figcaption>2.2 - 2.9</figcaption>
@@ -42,8 +46,10 @@ function updateDisplay(layer) {
             class="nav-item"
             :class="{selected: displays.includes('countries-join3')}"
             role="button"
+            tabindex="0"
         >
-            <svg class="nav-item-sq">
+            <svg class="nav-item-sq" role="img">
+                <title>colored square, orange</title>
                 <rect width="24px" height="24px" fill="#fb6a4a"></rect>
             </svg>
             <figcaption>3 - 3.9</figcaption>
@@ -53,8 +59,10 @@ function updateDisplay(layer) {
             class="nav-item"
             :class="{selected: displays.includes('countries-join4')}"
             role="button"
+            tabindex="0"
         >
-            <svg class="nav-item-sq">
+            <svg class="nav-item-sq" role="img">
+                <title>colored square, red</title>
                 <rect width="24px" height="24px" fill="#de2d26"></rect>
             </svg>
             <figcaption>4 - 4.9</figcaption>
@@ -64,8 +72,10 @@ function updateDisplay(layer) {
             class="nav-item"
             :class="{selected: displays.includes('countries-join5')}"
             role="button"
+            tabindex="0"
         >
-            <svg class="nav-item-sq">
+            <svg class="nav-item-sq" role="img">
+                <title>colored square, dark red</title>
                 <rect width="24px" height="24px" fill="#a50f15"></rect>
             </svg>
             <figcaption>5 and over</figcaption>
