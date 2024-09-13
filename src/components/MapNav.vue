@@ -19,6 +19,7 @@ function updateDisplay(layer) {
             @click="$emit('toggleLayer', 'countries-join1'), updateDisplay('countries-join1')"
             class="nav-item"
             :class="{selected: displays.includes('countries-join1')}"
+            role="button"
         >
             <svg class="nav-item-sq">
                 <rect width="24px" height="24px" fill="#f2f0f7"></rect>
@@ -29,6 +30,7 @@ function updateDisplay(layer) {
             @click="$emit('toggleLayer', 'countries-join2'), updateDisplay('countries-join2')"
             class="nav-item"
             :class="{selected: displays.includes('countries-join2')}"
+            role="button"
         >
             <svg class="nav-item-sq">
                 <rect width="24px" height="24px" fill="#fcae91"></rect>
@@ -39,6 +41,7 @@ function updateDisplay(layer) {
             @click="$emit('toggleLayer', 'countries-join3'), updateDisplay('countries-join3')"
             class="nav-item"
             :class="{selected: displays.includes('countries-join3')}"
+            role="button"
         >
             <svg class="nav-item-sq">
                 <rect width="24px" height="24px" fill="#fb6a4a"></rect>
@@ -49,6 +52,7 @@ function updateDisplay(layer) {
             @click="$emit('toggleLayer', 'countries-join4'), updateDisplay('countries-join4')"
             class="nav-item"
             :class="{selected: displays.includes('countries-join4')}"
+            role="button"
         >
             <svg class="nav-item-sq">
                 <rect width="24px" height="24px" fill="#de2d26"></rect>
@@ -59,6 +63,7 @@ function updateDisplay(layer) {
             @click="$emit('toggleLayer', 'countries-join5'), updateDisplay('countries-join5')"
             class="nav-item"
             :class="{selected: displays.includes('countries-join5')}"
+            role="button"
         >
             <svg class="nav-item-sq">
                 <rect width="24px" height="24px" fill="#a50f15"></rect>
