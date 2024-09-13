@@ -66,14 +66,16 @@ onMounted(() => {
             </thead>
             <tbody>
                 <tr v-for="chunkedSelect in chunkedSelects" :key="chunkedSelect.slug">
-                    <td class="nation-name">
-                        {{ chunkedSelect.name }}:
-                    </td>
-                    <td class="nation-rate">
-                        {{ chunkedSelect.rate }}
-                    </td>
-                    <td class="nation-region">
-                        {{ chunkedSelect.region }}
+                    <td>
+                        <span class="nation-name">
+                            {{ chunkedSelect.name }}:
+                        </span>
+                        <span class="nation-rate">
+                            {{ chunkedSelect.rate }}
+                        </span>
+                        <span class="nation-region">
+                            {{ chunkedSelect.region }}
+                        </span>
                     </td>
                 </tr>
             </tbody>

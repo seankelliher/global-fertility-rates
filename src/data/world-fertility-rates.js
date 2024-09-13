@@ -205,7 +205,7 @@ const nations = [
         rate: 4.09,
         year: "2023",
         rank: 26,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Central African Republic",
@@ -237,7 +237,7 @@ const nations = [
         rate: 3.85,
         year: "2023",
         rank: 30,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Sierra Leone",
@@ -413,7 +413,7 @@ const nations = [
         rate: 2.82,
         year: "2023",
         rank: 52,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Tuvalu",
@@ -421,7 +421,7 @@ const nations = [
         rate: 2.81,
         year: "2023",
         rank: 53,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Philippines",
@@ -429,7 +429,7 @@ const nations = [
         rate: 2.77,
         year: "2023",
         rank: 54,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Egypt",
@@ -445,7 +445,7 @@ const nations = [
         rate: 2.76,
         year: "2023",
         rank: 56,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Syria",
@@ -461,7 +461,7 @@ const nations = [
         rate: 2.72,
         year: "2023",
         rank: 58,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Tonga",
@@ -469,7 +469,7 @@ const nations = [
         rate: 2.7,
         year: "2023",
         rank: 59,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Comoros",
@@ -493,7 +493,7 @@ const nations = [
         rate: 2.59,
         year: "2023",
         rank: 62,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Northern Mariana Islands",
@@ -501,7 +501,7 @@ const nations = [
         rate: 2.59,
         year: "2023",
         rank: 63,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Belize",
@@ -509,7 +509,7 @@ const nations = [
         rate: 2.59,
         year: "2023",
         rank: 64,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Nauru",
@@ -517,7 +517,7 @@ const nations = [
         rate: 2.58,
         year: "2023",
         rank: 65,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Guatemala",
@@ -525,7 +525,7 @@ const nations = [
         rate: 2.57,
         year: "2023",
         rank: 66,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Israel",
@@ -573,7 +573,7 @@ const nations = [
         rate: 2.39,
         year: "2023",
         rank: 72,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Panama",
@@ -581,7 +581,7 @@ const nations = [
         rate: 2.37,
         year: "2023",
         rank: 73,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Botswana",
@@ -597,7 +597,7 @@ const nations = [
         rate: 2.37,
         year: "2023",
         rank: 75,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Laos",
@@ -605,7 +605,7 @@ const nations = [
         rate: 2.3,
         year: "2023",
         rank: 76,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Faroe Islands",
@@ -637,7 +637,7 @@ const nations = [
         rate: 2.23,
         year: "2023",
         rank: 80,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Micronesia, Federated States of",
@@ -645,7 +645,7 @@ const nations = [
         rate: 2.22,
         year: "2023",
         rank: 81,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Kuwait",
@@ -669,7 +669,7 @@ const nations = [
         rate: 2.2,
         year: "2023",
         rank: 84,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Dominican Republic",
@@ -677,7 +677,7 @@ const nations = [
         rate: 2.2,
         year: "2023",
         rank: 85,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Peru",
@@ -693,7 +693,7 @@ const nations = [
         rate: 2.18,
         year: "2023",
         rank: 87,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Argentina",
@@ -725,7 +725,7 @@ const nations = [
         rate: 2.13,
         year: "2023",
         rank: 91,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Cabo Verde",
@@ -773,7 +773,7 @@ const nations = [
         rate: 2.05,
         year: "2023",
         rank: 97,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Vietnam",
@@ -781,7 +781,7 @@ const nations = [
         rate: 2.04,
         year: "2023",
         rank: 98,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Cook Islands",
@@ -789,7 +789,7 @@ const nations = [
         rate: 2.04,
         year: "2023",
         rank: 99,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "El Salvador",
@@ -797,7 +797,7 @@ const nations = [
         rate: 2.04,
         year: "2023",
         rank: 100,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Turkmenistan",
@@ -829,7 +829,7 @@ const nations = [
         rate: 2.01,
         year: "2023",
         rank: 104,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Burma",
@@ -837,7 +837,7 @@ const nations = [
         rate: 2,
         year: "2023",
         rank: 105,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Indonesia",
@@ -845,7 +845,7 @@ const nations = [
         rate: 1.99,
         year: "2023",
         rank: 106,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Sint Maarten",
@@ -853,7 +853,7 @@ const nations = [
         rate: 1.98,
         year: "2023",
         rank: 107,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Honduras",
@@ -861,7 +861,7 @@ const nations = [
         rate: 1.98,
         year: "2023",
         rank: 108,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Virgin Islands",
@@ -869,7 +869,7 @@ const nations = [
         rate: 1.98,
         year: "2023",
         rank: 109,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Sri Lanka",
@@ -885,7 +885,7 @@ const nations = [
         rate: 1.97,
         year: "2023",
         rank: 111,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Curacao",
@@ -893,7 +893,7 @@ const nations = [
         rate: 1.97,
         year: "2023",
         rank: 112,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Tunisia",
@@ -917,7 +917,7 @@ const nations = [
         rate: 1.94,
         year: "2023",
         rank: 115,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Colombia",
@@ -933,7 +933,7 @@ const nations = [
         rate: 1.92,
         year: "2023",
         rank: 117,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Iran",
@@ -997,7 +997,7 @@ const nations = [
         rate: 1.89,
         year: "2023",
         rank: 125,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Bermuda",
@@ -1013,7 +1013,7 @@ const nations = [
         rate: 1.89,
         year: "2023",
         rank: 127,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Saudi Arabia",
@@ -1069,7 +1069,7 @@ const nations = [
         rate: 1.86,
         year: "2023",
         rank: 134,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "New Zealand",
@@ -1077,7 +1077,7 @@ const nations = [
         rate: 1.86,
         year: "2023",
         rank: 135,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "United States",
@@ -1093,7 +1093,7 @@ const nations = [
         rate: 1.84,
         year: "2023",
         rank: 137,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Norway",
@@ -1109,7 +1109,7 @@ const nations = [
         rate: 1.82,
         year: "2023",
         rank: 139,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Aruba",
@@ -1117,7 +1117,7 @@ const nations = [
         rate: 1.82,
         year: "2023",
         rank: 140,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Seychelles",
@@ -1141,7 +1141,7 @@ const nations = [
         rate: 1.8,
         year: "2023",
         rank: 143,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "French Polynesia",
@@ -1149,7 +1149,7 @@ const nations = [
         rate: 1.8,
         year: "2023",
         rank: 144,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Nicaragua",
@@ -1157,7 +1157,7 @@ const nations = [
         rate: 1.78,
         year: "2023",
         rank: 145,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Belgium",
@@ -1197,7 +1197,7 @@ const nations = [
         rate: 1.76,
         year: "2023",
         rank: 150,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Chile",
@@ -1237,7 +1237,7 @@ const nations = [
         rate: 1.74,
         year: "2023",
         rank: 155,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Finland",
@@ -1253,7 +1253,7 @@ const nations = [
         rate: 1.74,
         year: "2023",
         rank: 157,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Saint Vincent and the Grenadines",
@@ -1261,7 +1261,7 @@ const nations = [
         rate: 1.74,
         year: "2023",
         rank: 158,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Australia",
@@ -1269,7 +1269,7 @@ const nations = [
         rate: 1.73,
         year: "2023",
         rank: 159,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Mexico",
@@ -1293,7 +1293,7 @@ const nations = [
         rate: 1.72,
         year: "2023",
         rank: 162,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Saint Lucia",
@@ -1301,7 +1301,7 @@ const nations = [
         rate: 1.72,
         year: "2023",
         rank: 163,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Lebanon",
@@ -1317,7 +1317,7 @@ const nations = [
         rate: 1.71,
         year: "2023",
         rank: 165,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Cuba",
@@ -1325,7 +1325,7 @@ const nations = [
         rate: 1.71,
         year: "2023",
         rank: 166,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Barbados",
@@ -1333,7 +1333,7 @@ const nations = [
         rate: 1.7,
         year: "2023",
         rank: 167,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Turks and Caicos Islands",
@@ -1341,7 +1341,7 @@ const nations = [
         rate: 1.7,
         year: "2023",
         rank: 168,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Maldives",
@@ -1357,7 +1357,7 @@ const nations = [
         rate: 1.7,
         year: "2023",
         rank: 170,
-        region: "Australia and Oceania"
+        region: "AU + Oceania"
     },
     {
         name: "Liechtenstein",
@@ -1405,7 +1405,7 @@ const nations = [
         rate: 1.64,
         year: "2023",
         rank: 176,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Trinidad and Tobago",
@@ -1413,7 +1413,7 @@ const nations = [
         rate: 1.63,
         year: "2023",
         rank: 177,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Luxembourg",
@@ -1565,7 +1565,7 @@ const nations = [
         rate: 1.54,
         year: "2023",
         rank: 196,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "San Marino",
@@ -1685,7 +1685,7 @@ const nations = [
         rate: 1.45,
         year: "2023",
         rank: 211,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Portugal",
@@ -1717,7 +1717,7 @@ const nations = [
         rate: 1.39,
         year: "2023",
         rank: 215,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "British Virgin Islands",
@@ -1725,7 +1725,7 @@ const nations = [
         rate: 1.37,
         year: "2023",
         rank: 216,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Bosnia and Herzegovina",
@@ -1749,7 +1749,7 @@ const nations = [
         rate: 1.32,
         year: "2023",
         rank: 219,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Spain",
@@ -1765,7 +1765,7 @@ const nations = [
         rate: 1.25,
         year: "2023",
         rank: 221,
-        region: "Central America and the Caribbean"
+        region: "CAM + Carib."
     },
     {
         name: "Italy",
@@ -1781,7 +1781,7 @@ const nations = [
         rate: 1.23,
         year: "2023",
         rank: 223,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Hong Kong",
@@ -1789,7 +1789,7 @@ const nations = [
         rate: 1.23,
         year: "2023",
         rank: 224,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Singapore",
@@ -1797,7 +1797,7 @@ const nations = [
         rate: 1.17,
         year: "2023",
         rank: 225,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Korea, South",
@@ -1805,7 +1805,7 @@ const nations = [
         rate: 1.11,
         year: "2023",
         rank: 226,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     },
     {
         name: "Taiwan",
@@ -1813,7 +1813,7 @@ const nations = [
         rate: 1.09,
         year: "2023",
         rank: 227,
-        region: "East and Southeast Asia"
+        region: "East + SE Asia"
     }
 ];
 

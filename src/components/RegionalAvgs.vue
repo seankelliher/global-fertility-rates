@@ -22,16 +22,16 @@ onMounted(() => {
         if (nation.region === "South Asia") {
             southAsia.value.push(nation.rate);
         }
-        if (nation.region === "East and Southeast Asia") {
+        if (nation.region === "East + SE Asia") {
             eastSeAsia.value.push(nation.rate);
         }
         if (nation.region === "Middle East") {
             middleEast.value.push(nation.rate);
         }
-        if (nation.region === "Australia and Oceania") {
+        if (nation.region === "AU + Oceania") {
             ausOceania.value.push(nation.rate);
         }
-        if (nation.region === "Central America and the Caribbean") {
+        if (nation.region === "CAM + Carib.") {
             cenAmerCarib.value.push(nation.rate);
         }
         if (nation.region === "Central Asia") {
@@ -65,50 +65,72 @@ function findAverages(nat) {
         <table>
             <thead>
                 <tr>
-                    <th class="nation-name">Region</th>
-                    <th class="nation-name">Rate</th>
+                    <th>
+                        <span class="nation-name">Region</span>
+                        <span class="nation-rate">Rate</span>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="nation-name">Africa</td>
-                    <td class="nation-rate">{{ findAverages(africa) }}</td>
+                    <td>
+                    <span class="nation-name">Africa</span>
+                    <span class="nation-rate">{{ findAverages(africa) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">South Asia</td>
-                    <td class="nation-rate">{{ findAverages(southAsia) }}</td>
+                    <td>
+                    <span class="nation-name">South Asia</span>
+                    <span class="nation-rate">{{ findAverages(southAsia) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">East and Southeast Asia</td>
-                    <td class="nation-rate">{{ findAverages(eastSeAsia) }}</td>
+                    <td>
+                    <span class="nation-name">East + SE Asia</span>
+                    <span class="nation-rate">{{ findAverages(eastSeAsia) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">Middle East</td>
-                    <td class="nation-rate">{{ findAverages(middleEast) }}</td>
+                    <td>
+                    <span class="nation-name">Middle East</span>
+                    <span class="nation-rate">{{ findAverages(middleEast) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">Australia and Oceania</td>
-                    <td class="nation-rate">{{ findAverages(ausOceania) }}</td>
+                    <td>
+                    <span class="nation-name">AU + Oceania</span>
+                    <span class="nation-rate">{{ findAverages(ausOceania) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">Central America and the Caribbean</td>
-                    <td class="nation-rate">{{ findAverages(cenAmerCarib) }}</td>
+                    <td>
+                    <span class="nation-name">CAM + Carib.</span>
+                    <span class="nation-rate">{{ findAverages(cenAmerCarib) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">Central Asia</td>
-                    <td class="nation-rate">{{ findAverages(cenAsia) }}</td>
+                    <td>
+                    <span class="nation-name">Central Asia</span>
+                    <span class="nation-rate">{{ findAverages(cenAsia) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">Europe</td>
-                    <td class="nation-rate">{{ findAverages(europe) }}</td>
+                    <td>
+                    <span class="nation-name">Europe</span>
+                    <span class="nation-rate">{{ findAverages(europe) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">South America</td>
-                    <td class="nation-rate">{{ findAverages(southAmer) }}</td>
+                    <td>
+                    <span class="nation-name">South America</span>
+                    <span class="nation-rate">{{ findAverages(southAmer) }}</span>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="nation-name">North America</td>
-                    <td class="nation-rate">{{ findAverages(northAmer) }}</td>
+                    <td>
+                    <span class="nation-name">North America</span>
+                    <span class="nation-rate">{{ findAverages(northAmer) }}</span>
+                    </td>
                 </tr>
             </tbody>
         </table>

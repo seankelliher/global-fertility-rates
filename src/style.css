@@ -153,6 +153,7 @@ th {
     line-height: 1.8;
     font-weight: 500;
     color: #181d19; /* N-10 */
+    text-align: left;
 }
 
 td {
@@ -160,12 +161,12 @@ td {
     line-height: 1.8;
     font-weight: 400;
     color: #181d19; /* N-10 */
-    border-bottom: 1px solid #414942; /* NV-30 */
+    border-bottom: 1px solid #c0c9c0; /* NV-80 */
 }
 
 /* Span classes for items in tables */
 .nation-name {
-    width: 40%;
+    width: 45%;
     margin: 0;
     padding: 0;
     display: inline-flex;
@@ -179,7 +180,7 @@ td {
 }
 
 .nation-region {
-    width: 45%;
+    width: 40%;
     margin: 0;
     padding: 0;
     display: inline-flex;
