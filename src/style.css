@@ -23,7 +23,7 @@ header {
     position: absolute;
     text-align: center;
     z-index: 1;
-    /* pointer events none */
+    pointer-events: none; /* let's user click nation on map, if under header */
 }
 
 /* Container for Mapbox map */
@@ -75,7 +75,7 @@ nav {
 .nav-item {
     width: 15%;
     margin: 0;
-    padding: 0 0 0.25em 0;
+    padding: 0 0 0.25em; /* longhand 0 0 0.25em 0 */
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -103,7 +103,6 @@ section {
     width: 100%;
     margin-top: 1em;
     padding: 1em 0;
-    /*border-top: 1px solid #414942;   NV-30 */
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -115,10 +114,7 @@ section {
 section::before {
     content: "";
     position: absolute;
-    top: -1px;
-    bottom: 0;
-    right: calc((100vw - 100%) / -2);
-    left: calc((100vw - 100%) / -2);
+    inset: -1px calc((100vw - 100%) / -2) 0 calc((100vw - 100%) / -2);
     border-top: 1px solid #414942; /* NV-30 */
     z-index: -1;
 }
@@ -136,7 +132,7 @@ section::before {
 
 .title-heading {
     margin: 0;
-    padding: 0 1em 0 1em;
+    padding: 0 1em;
     background: #2c6a45; /* P-40 */
     border-radius: 12px;
     flex: initial;
@@ -204,7 +200,6 @@ form {
     background: #e5eae2; /* N-92 */
     border-radius: 12px;
     flex: initial;
-    flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;  /* main axis */
@@ -228,7 +223,7 @@ input[type="text"] {
 @media (min-width: 300px) and (max-width: 399px) {
     input[type="text"] {
         width: 100%;
-        margin: 0.75em 0 1em 0;
+        margin: 0.75em 0 1em; /* longhand 0.75em 0 1em 0 */
     }
 }
 
@@ -326,7 +321,6 @@ button:hover {
 
 .search-results {
     width: 100%;
-    min-height: 5em;
     margin-top: 0.5em;
     padding: 0;
     flex: initial;
