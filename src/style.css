@@ -219,13 +219,52 @@ label {
 }
 
 input[type="text"] {
-    width: 50%;
-    margin-left: 1em;
-    margin-right: 1em;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
     color: #42474e;
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+    input[type="text"] {
+        width: 100%;
+        margin: 0.75em 0 1em 0;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 499px) {
+    input[type="text"] {
+        width: 90%;
+        margin: 0.75em 10% 1em 0;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 599px) {
+    input[type="text"] {
+        width: 80%;
+        margin: 0.75em 20% 1em 0;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 699px) {
+    input[type="text"] {
+        width: 70%;
+        margin: 0.75em 30% 1em 0;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 799px) {
+    input[type="text"] {
+        width: 60%;
+        margin: 0.75em 40% 1em 0;
+    }
+}
+
+@media (min-width: 800px) {
+    input[type="text"] {
+        width: 40%;
+        margin: 0 2.5%;
+    }
 }
 
 input::placeholder {
@@ -236,13 +275,29 @@ input::placeholder {
 }
 
 button {
-    width: 5em;
-    margin-right: 2.5%;
     padding: 0;
     border-radius: 8px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
     font-weight: 500;
+}
+
+@media (min-width: 300px) and (max-width: 799px) {
+    button {
+        width: 5em;
+        margin-right: 5%;
+    }
+}
+
+@media (min-width: 800px) {
+    button {
+        width: 5em;
+        margin-right: 2.5%;
+    }
+
+    button:last-of-type {
+        margin-right: 0;
+    }
 }
 
 button:hover {
@@ -272,7 +327,7 @@ button:hover {
 .search-results {
     width: 100%;
     min-height: 5em;
-    margin: 0%;
+    margin-top: 0.5em;
     padding: 0;
     flex: initial;
     display: flex;
