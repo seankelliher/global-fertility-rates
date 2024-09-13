@@ -349,7 +349,12 @@ h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 600;
-    color: #001f28; /* P-10 */
+    color: #fff; /* S-100 */
+    padding: 0 0.5em;
+    background: #06677f; /* S-40 */
+    display: inline-flex;
+    filter: drop-shadow(2px 2px 3px #06677f);  /* S-40 */
+    border-radius:6px
 }
 
 h2 {
