@@ -4,9 +4,11 @@ import { nations } from "../data/world-fertility-rates.js";
 
 const searchTerm = ref("");
 const slugs = ref([]);
+const displayResults = ref(false);
 const count = ref(0);
 
 function runSearchTerm() {
+    displayResults.value = true;
     count.value = 0;
     nations.forEach((nation, index) => {
         if (nation.name.toLowerCase().includes(searchTerm.value.toLowerCase())) {
@@ -20,6 +22,7 @@ function runSearchTerm() {
 function clearSearchTerm() {
     searchTerm.value = "";
     slugs.value.length = 0;
+    displayResults.value = false;
     count.value = 0;
 }
 </script>
@@ -48,7 +51,7 @@ function clearSearchTerm() {
                 Clear
             </button>
 
-            <div class="search-results">
+            <div v-if="displayResults" class="search-results">
                 <dl>
                     <dd v-for="slug in slugs" :key="slug">
                         {{ nations[slug].name }} is in {{ nations[slug].region }} and has a TDR of {{ nations[slug].rate }}.
