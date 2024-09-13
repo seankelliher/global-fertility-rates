@@ -347,13 +347,14 @@ dd {
 /* Font styles and their media queries */
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1em;
     line-height: 1.5;
     font-weight: 600;
-    color: #fff; /* S-100 */
+    color: #eef2e9; /* N-95 */
     padding: 0 0.5em;
-    background: #06677f; /* S-40 */
+    background: #2d322c; /* N-20 */
     display: inline-flex;
-    filter: drop-shadow(2px 2px 3px #06677f);  /* S-40 */
+    filter: drop-shadow(2px 2px 3px #414942);  /* NV-30 */
     border-radius:6px
 }
 
@@ -400,10 +401,6 @@ p {
 
 /* Media queries for fonts */
 @media (min-width: 300px) and (max-width: 399px) {
-    h1 {
-        font-size: 1.125em; /* 18 px */
-    }
-
     h2, figcaption {
         font-size: 0.8125em; /* 13px */
     }
@@ -414,10 +411,6 @@ p {
 }
 
 @media (min-width: 400px) and (max-width: 499px) {
-    h1 {
-        font-size: 1.1875em; /* 19px */
-    }
-
     h2, figcaption {
         font-size: 0.875em; /* 14px */ 
     }
@@ -428,10 +421,6 @@ p {
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
-    h1 {
-        font-size: 1.25em; /* 20px */
-    }
-
     h2, figcaption {
         font-size: 0.9375em; /* 15px */ 
     }
@@ -442,10 +431,6 @@ p {
 }
 
 @media (min-width: 600px) {
-    h1 {
-        font-size: 1.3125em; /* 21px */
-    }
-
     h2, figcaption {
         font-size: 1em; /* 16px */
     }
