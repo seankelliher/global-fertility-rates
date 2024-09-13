@@ -5,12 +5,21 @@ Interactive map and lists of fertility rates in 227 nations around the world, ma
 
 ## Project Status
 
-**DOING RENOVATIONS: General layout okay on larger screens. Some issues on smaller screens. To do: (1) Write media queries for smaller screens. (2) Test for bugs and accessibility issues. (3) Test for browser issues.**
+Project meets general accessibility (WACG) and cross-browser requirements. More testing with a dedicated testing service would be helpful if deploying to production.
 
 ## Project Screen Shots
 
-* Default view with Australia selected on map.
+* Default view of map.
 ![screen shot of project](/screenshots/global-fertility-rates-screenshot1.png?s=600)
+
+* Map with some rates selected, and Australia clicked.
+![screen shot of project](/screenshots/global-fertility-rates-screenshot2.png?s=600)
+
+* Paginated nation rates.
+![screen shot of project](/screenshots/global-fertility-rates-screenshot3.png?s=600)
+
+* Regional averages, and search (with results for Peru).
+![screen shot of project](/screenshots/global-fertility-rates-screenshot4.png?s=600)
 
 ## Installation and Setup Instructions
 
