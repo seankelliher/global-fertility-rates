@@ -58,9 +58,7 @@ function findAverages(nat) {
 <template>
     <section>
         <div class="title">
-            <div class="title-heading">
-                <h2>Regional Averages</h2>
-            </div>
+            <h2>Regional averages</h2>
         </div>
         <table>
             <thead>
