@@ -126,7 +126,7 @@ onMounted(() => {
 
             new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
-                .setHTML(`<p>${e.features[0].properties.name_en}: ${rate} births per woman</p>`)
+                .setHTML(`<span class="popup-text">${e.features[0].properties.name_en}: ${rate} births per woman</span>`)
                 .addTo(map.value);
         });
 

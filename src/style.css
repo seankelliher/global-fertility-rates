@@ -414,3 +414,12 @@ p {
     color: #ba1a1a; /* E-40 */
 }
 
+/* Span in Mapbox pop-ups */
+.popup-text {
+    font-family: Roboto, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs-1);
+    line-height: 1.5;
+    color: #181d19; /* N-10 */
+}
