@@ -40,13 +40,13 @@ function clearSearchTerm() {
             <button
                 type="submit"
                 @click="runSearchTerm()"
-                class="btn-search"
+                class="nations btn-search"
             >
                 Search
             </button>
             <button
                 @click="clearSearchTerm()"
-                class="btn-clear"
+                class="nations btn-clear"
             >
                 Clear
             </button>
