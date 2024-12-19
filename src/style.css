@@ -274,7 +274,7 @@ input::placeholder {
     color: #717971; /* NV-50 */
 }
 
-button {
+button.nations {
     padding: 0;
     border-radius: 8px;
     font-family: Roboto, serif;
@@ -285,19 +285,19 @@ button {
 }
 
 @media (min-width: 300px) and (max-width: 799px) {
-    button {
+    button.nations {
         width: 5em;
         margin-right: 5%;
     }
 }
 
 @media (min-width: 800px) {
-    button {
+    button.nations {
         width: 5em;
         margin-right: 2.5%;
     }
 
-    button:last-of-type {
+    button.nations:last-of-type {
         margin-right: 0;
     }
 }
@@ -344,9 +344,11 @@ dl {
 }
 
 dd {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
+    font-family: Roboto, serif;
     font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs0);
+    line-height: 1.8;
     color: #181d19; /* N-10 */
     margin-left: 0;
 }
