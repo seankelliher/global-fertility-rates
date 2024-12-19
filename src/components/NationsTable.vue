@@ -52,9 +52,7 @@ onMounted(() => {
 <template>
     <section>
         <div class="title">
-            <div class="title-heading">
-                <h2>All Nations, Low to High TDR</h2>
-            </div>
+            <h2>All nations</h2>
         </div>
         <table>
             <thead>
