@@ -26,7 +26,7 @@ function updateDisplay(layer) {
                 <title>colored square, light gray</title>
                 <rect width="24px" height="24px" fill="#f2f0f7"></rect>
             </svg>
-            <figcaption>2.1 and under</figcaption>
+            <figcaption>0 - 2.1</figcaption>
         </figure>
         <figure
             @click="$emit('toggleLayer', 'countries-join2'), updateDisplay('countries-join2')"
@@ -78,7 +78,7 @@ function updateDisplay(layer) {
                 <title>colored square, dark red</title>
                 <rect width="24px" height="24px" fill="#a50f15"></rect>
             </svg>
-            <figcaption>5 and over</figcaption>
+            <figcaption>5+</figcaption>
         </figure>
     </nav>
 </template>
