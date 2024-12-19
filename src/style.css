@@ -1,3 +1,11 @@
+/* @link https://utopia.fyi/type/calculator?c=320,14,1.125,1280,18,1.125,2,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+:root {
+    --fs-1: clamp(0.7778rem, 0.7037rem + 0.3704vw, 1rem);
+    --fs0: clamp(0.875rem, 0.7917rem + 0.4167vw, 1.125rem);
+    --fs1: clamp(0.9844rem, 0.8906rem + 0.4688vw, 1.2656rem);
+    --fs2: clamp(1.1074rem, 1.002rem + 0.5273vw, 1.4238rem);
+}
+
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
     background: #f6fbf3; /* N-98 */
@@ -15,54 +23,47 @@ body {
 }
 
 header {
-    width: 90%;
-    max-width: 660px;
+    width: 95%;
     margin: 0;
-    padding: 0 5%;
+    padding: 0 2.5%;
     flex: initial;
-    position: absolute;
-    text-align: center;
-    z-index: 1;
-    pointer-events: none; /* let's user click nation on map, if under header */
 }
 
 /* Container for Mapbox map */
 .box-for-map {
-    width: 90%;
-    height: 80vh;
+    width: 95%;
     margin: 0;
-    padding: 0 5%;
+    padding: 0 2.5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;  /* main axis */
     align-items: flex-start; /* cross axis */
-    position: relative;
 }
 
 .map-container {
-    width: 100vw;
-    height: 80vh;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    margin: 0 -50vw;
-    overflow-y: hidden;
-}
-
-.map-caption {
-    width: 80%;
-    margin: 1em 5%;
-    padding: 0 5%;
-    background: #e5eae2; /* N-92 */
-    border-radius: 12px;
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
     flex: initial;
 }
 
-nav {
-    width: 90%;
+.map-caption {
+    width: 95%;
     margin: 0;
-    padding: 0.5em 5%;
+    padding: 0 2.5%;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  /* main axis */
+    align-items: stretch; /* cross axis */
+}
+
+nav {
+    width: 95%;
+    margin: 0;
+    padding: 0.5em 2.5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -70,23 +71,21 @@ nav {
     align-items: flex-start; /* cross axis */
 }
 
-
 /* Class for figure */
-.nav-item {
-    width: 15%;
+figure.nav-item {
     margin: 0;
-    padding: 0 0 0.25em; /* longhand 0 0 0.25em 0 */
+    padding: 0;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;  /* main axis */
-    align-items: center; /* cross axis */
+    align-items: flex-start; /* cross axis */
 }
 
 .nav-item:hover {
+    display: inline-flex;
     background: #eaefe8; /* N-94 */
     cursor: pointer;
-
 }
 
 .nav-item-sq {
@@ -100,9 +99,9 @@ nav {
 }
 
 section {
-    width: 100%;
+    width: 95%;
     margin-top: 1em;
-    padding: 1em 0;
+    padding: 1em 2.5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -120,42 +119,42 @@ section::before {
 }
 
 .title {
-    width: 90%;
+    width: 100%;
     margin: 0;
-    padding: 0.5em 5%;
+    padding: 0.5em 0;
     flex: initial;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;  /* main axis */
-    align-items: flex-start; /* cross axis */
 }
 
-.title-heading {
+.text {
+    width: 100%;
+    max-width: 660px;
     margin: 0;
-    padding: 0 1em;
-    background: #2c6a45; /* P-40 */
-    border-radius: 12px;
+    padding: 0;
     flex: initial;
 }
 
 table {
-    width: 90%;
-    margin: 0 5%;
+    width: 100%;
+    margin: 0;
     padding: 0;
 }
 
 th {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Roboto, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: var(--fs0);
     line-height: 1.8;
-    font-weight: 500;
     color: #181d19; /* N-10 */
     text-align: left;
 }
 
 td {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
+    font-family: Roboto, serif;
     font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs0);
+    line-height: 1.8;
     color: #181d19; /* N-10 */
     border-bottom: 1px solid #c0c9c0; /* NV-80 */
 }
@@ -203,20 +202,24 @@ form {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;  /* main axis */
-    align-items: flex-start; /* cross axis */
+    align-items: center /* cross axis */
 }
 
 label {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    font-family: Bevan, serif;
     font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs-1);
+    line-height: 1.5;
     color: #42474e;
 }
 
 input[type="text"] {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    font-family: Roboto, serif;
     font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs0);
+    line-height: 1.5;
     color: #42474e;
 }
 
@@ -263,18 +266,22 @@ input[type="text"] {
 }
 
 input::placeholder {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    font-family: Roboto, serif;
     font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs0);
+    line-height: 1.5;
     color: #717971; /* NV-50 */
 }
 
 button {
     padding: 0;
     border-radius: 8px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
-    font-weight: 500;
+    font-family: Roboto, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs0);
+    line-height: 1.5;
 }
 
 @media (min-width: 300px) and (max-width: 799px) {
@@ -346,39 +353,45 @@ dd {
 
 /* Font styles and their media queries */
 h1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1em;
+    font-family: Bevan, serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.5;
-    font-weight: 600;
-    color: #eef2e9; /* N-95 */
-    padding: 0 0.5em;
-    background: #2d322c; /* N-20 */
-    display: inline-flex;
-    filter: drop-shadow(2px 2px 3px #414942);  /* NV-30 */
-    border-radius:6px
+    font-size: var(--fs2);
+    color: #181d19; /* N-10 */
 }
 
 h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Bevan, serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.5;
-    font-weight: 500;
-    color: #fff; /* N-100 */
+    font-size: var(--fs1);
+    color: #181d19; /* N-10 */
     margin-top: 0.25em;
     margin-bottom: 0.25em;
 }
 
 figcaption {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
+    font-family: Roboto, serif;
     font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs-1);
+    line-height: 1.8;
     color: #181d19; /* N-10 */
 }
 
 p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
+    font-family: Roboto, serif;
     font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs0);
+    line-height: 1.8;
     color: #181d19; /* N-10 */
+}
+
+.no-margin-top {
+    margin-top: 0;
 }
 
 .paginate {
@@ -399,43 +412,3 @@ p {
     color: #ba1a1a; /* E-40 */
 }
 
-/* Media queries for fonts */
-@media (min-width: 300px) and (max-width: 399px) {
-    h2, figcaption {
-        font-size: 0.8125em; /* 13px */
-    }
-
-    p, dd, th, td, label, input[type="text"], input::placeholder, button {
-        font-size: 0.875em; /* 14px */
-    }
-}
-
-@media (min-width: 400px) and (max-width: 499px) {
-    h2, figcaption {
-        font-size: 0.875em; /* 14px */ 
-    }
-
-    p, dd, th, td, label, input[type="text"], input::placeholder, button {
-        font-size: 0.9375em; /* 15px */
-    }
-}
-
-@media (min-width: 500px) and (max-width: 599px) {
-    h2, figcaption {
-        font-size: 0.9375em; /* 15px */ 
-    }
-
-    p, dd, th, td, label, input[type="text"], input::placeholder, button {
-        font-size: 1em; /* 16px */
-    }
-}
-
-@media (min-width: 600px) {
-    h2, figcaption {
-        font-size: 1em; /* 16px */
-    }
-
-    p, dd, th, td, label, input[type="text"], input::placeholder, button {
-        font-size: 1.0625em; /* 17px */
-    }
-}
