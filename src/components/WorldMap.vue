@@ -2,7 +2,6 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import mapboxgl from "mapbox-gl";
 import  { nations } from "../data/world-nations.js";
-import HeaderPart from "./HeaderPart.vue";
 import MapCaption from "./MapCaption.vue";
 import MapNav from "./MapNav.vue";
 
@@ -152,7 +151,6 @@ onUnmounted(() => {
 
 <template>
     <div class="box-for-map">
-        <HeaderPart headline="Global Fertility Rates" />
         <div ref="mapContainer" class="map-container"></div>
     </div>
     <MapNav @toggle-layer="toggleLayer" />
