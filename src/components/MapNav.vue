@@ -2,7 +2,8 @@
 import { ref } from "vue";
 defineEmits(["toggleLayer"]);
 
-const displays = ref([]);
+// Few categories highlighted by default. Helps users recognize feature.
+const displays = ref(["countries-join2", "countries-join3", "countries-join4"]);
 
 function updateDisplay(layer) {
     if (displays.value.includes(layer)) {
