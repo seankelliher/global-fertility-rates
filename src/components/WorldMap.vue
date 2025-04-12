@@ -27,8 +27,9 @@ onMounted(() => {
     // Load the map from Mapbox.
     map.value = new mapboxgl.Map({
         container: mapContainer.value,
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [22, 16],
+        style: "mapbox://styles/mapbox/outdoors-v12",
+        projection: "naturalEarth",
+        center: [0, 0], // lng, lat
         zoom: 1.6
     });
 
