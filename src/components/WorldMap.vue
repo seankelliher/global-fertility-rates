@@ -6,7 +6,11 @@ import MapCaption from "./MapCaption.vue";
 import MapNav from "./MapNav.vue";
 
 // Read only, restricted to requests from single URL.
-mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvNmhzZjVsMGlhaDJybDA0bWtqY3V0ZiJ9.q8WPvwDCqNfUhfsfJjaEQg";
+//mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvNmhzZjVsMGlhaDJybDA0bWtqY3V0ZiJ9.q8WPvwDCqNfUhfsfJjaEQg";
+
+//TEMP - DELETE THIS
+mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xtZTd6dmlyMW13NjNkbXJyeTU3eWZveiJ9.8GxPKV0ool_9OyTGwZU0yg";
+// END TEMP
 
 let map = ref(null);
 const mapContainer = ref(null);
@@ -70,9 +74,9 @@ onMounted(() => {
         }
         const loops = [
             [0, 2.19, "#f2f0f7", rateCat1, "countries-join1", "none"],
-            [2.19, 2.99, "#fcae91", rateCat2, "countries-join2", "none"],
-            [2.99, 3.99, "#fb6a4a", rateCat3, "countries-join3", "none"],
-            [3.99, 4.99, "#de2d26", rateCat4, "countries-join4", "none"],
+            [2.19, 2.99, "#fcae91", rateCat2, "countries-join2", "visible"],
+            [2.99, 3.99, "#fb6a4a", rateCat3, "countries-join3", "visible"],
+            [3.99, 4.99, "#de2d26", rateCat4, "countries-join4", "visible"],
             [4.99, 15.99, "#a50f15", rateCat5, "countries-join5", "none"], // 15.99 is safe high end.
             [0, 0, "transparent", rateCat6, "countries-join6", "visible"] // no colors, for pop-ups.
         ];

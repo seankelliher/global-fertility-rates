@@ -67,19 +67,31 @@ nav {
     flex: initial;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;  /* main axis */
     align-items: flex-start; /* cross axis */
 }
+
+@media (min-width: 300px) and (max-width: 499px) {
+    nav {
+        justify-content: space-between;  /* main axis */
+    }
+}
+
+@media (min-width: 500px) {
+    nav {
+        justify-content: space-evenly;  /* main axis */
+    }
+}
+
 
 /* Class for figure */
 figure.nav-item {
     margin: 0;
-    padding: 0;
+    padding: 0 0.25em 0 0;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;  /* main axis */
-    align-items: flex-start; /* cross axis */
+    align-items: center; /* cross axis */
 }
 
 .nav-item:hover {
@@ -95,7 +107,8 @@ figure.nav-item {
 }
 
 .selected {
-    border-bottom: 2px solid #414942; /* NV-30 */
+    border-bottom: 1px solid #414942; /* NV-30 */
+    background: #e5eae2; /* N-92 */
 }
 
 section {
@@ -379,7 +392,7 @@ figcaption {
     font-weight: 400;
     font-style: normal;
     font-size: var(--fs-1);
-    line-height: 1.8;
+    line-height: 1.6;
     color: #181d19; /* N-10 */
 }
 
