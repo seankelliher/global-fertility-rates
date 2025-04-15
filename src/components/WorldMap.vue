@@ -6,11 +6,7 @@ import MapCaption from "./MapCaption.vue";
 import MapNav from "./MapNav.vue";
 
 // Read only, restricted to requests from single URL.
-//mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvNmhzZjVsMGlhaDJybDA0bWtqY3V0ZiJ9.q8WPvwDCqNfUhfsfJjaEQg";
-
-//TEMP - DELETE THIS
-mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xtZTd6dmlyMW13NjNkbXJyeTU3eWZveiJ9.8GxPKV0ool_9OyTGwZU0yg";
-// END TEMP
+mapboxgl.accessToken = "pk.eyJ1Ijoic2s1NjQ2NzMiLCJhIjoiY2xvNmhzZjVsMGlhaDJybDA0bWtqY3V0ZiJ9.q8WPvwDCqNfUhfsfJjaEQg";
 
 let map = ref(null);
 const mapContainer = ref(null);
