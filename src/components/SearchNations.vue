@@ -54,7 +54,7 @@ function clearSearchTerm() {
             <div v-if="displayResults" class="search-results">
                 <dl>
                     <dd v-for="slug in slugs" :key="slug">
-                        {{ nations[slug].name }} is in {{ nations[slug].region }} and has a TDR of {{ nations[slug].rate }}.
+                        {{ nations[slug].name }} is in {{ nations[slug].region }} and has a TFR of {{ nations[slug].rate }}.
                     </dd>
                     <dd
                         class="error"

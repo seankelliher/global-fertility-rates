@@ -17,7 +17,7 @@ function updateDisplay(layer) {
     <div class="intro-box">
         <div class="intro-box-content">
             <h2>Explore the map</h2>
-            <p class="no-margin-top">Tap range below to highlight nations on map. On the map, you can tap a nation to reveal its TFR.</p>
+            <p class="no-margin-top">Tap a range below to highlight its nations on the map. On the map itself, you can tap a nation to reveal its TFR.</p>
         </div>
     </div>
     <nav>
