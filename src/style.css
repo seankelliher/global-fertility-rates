@@ -9,7 +9,6 @@
 /* Stylesheet uses Level 3 Media Queries. Level 4 coverage still spotty. */
 body {
     background: #f6fbf3; /* N-98 */
-    margin-top: 0;
 }
 
 #container {
@@ -25,7 +24,27 @@ body {
 header {
     width: 95%;
     margin: 0;
+    padding: 1em 2.5%;
+    text-align: center;
+    flex: initial;
+}
+
+.intro-box {
+    width: 95%;
+    margin: 0;
     padding: 0 2.5%;
+    flex: initial;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;  /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+.intro-box-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
     flex: initial;
 }
 
@@ -33,7 +52,7 @@ header {
 .box-for-map {
     width: 95%;
     margin: 0;
-    padding: 0 2.5%;
+    padding: 1em 2.5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -62,31 +81,22 @@ header {
 
 nav {
     width: 95%;
-    margin: 0;
-    padding: 0.5em 2.5%;
+    margin: 0 0 2em;
+    padding: 0 2.5%;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;  /* main axis */
     align-items: flex-start; /* cross axis */
-}
-
-@media (min-width: 300px) and (max-width: 499px) {
-    nav {
-        justify-content: space-between;  /* main axis */
-    }
-}
-
-@media (min-width: 500px) {
-    nav {
-        justify-content: space-evenly;  /* main axis */
-    }
 }
 
 
 /* Class for figure */
 figure.nav-item {
+    width: 100%;
+    max-width: 600px;
     margin: 0;
-    padding: 0 0.25em 0 0;
+    padding: 0.25em 0;
     flex: initial;
     display: flex;
     flex-flow: row wrap;
@@ -126,7 +136,7 @@ section {
 section::before {
     content: "";
     position: absolute;
-    inset: -1px calc((100vw - 100%) / -2) 0 calc((100vw - 100%) / -2);
+    inset: -1px calc((100vw - 100%) / -2) 0;
     border-top: 1px solid #414942; /* NV-30 */
     z-index: -1;
 }
@@ -403,6 +413,15 @@ p {
     font-size: var(--fs0);
     line-height: 1.8;
     color: #181d19; /* N-10 */
+}
+
+.larger-txt {
+    font-size: var(--fs1);
+    font-weight: 500;
+}
+
+.larger-bottom {
+    margin-bottom: 2em;
 }
 
 .no-margin-top {
