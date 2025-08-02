@@ -2,7 +2,7 @@
 import { ref } from "vue";
 defineEmits(["toggleLayer"]);
 
-const displays = ref(["countries-join2", "countries-join3", "countries-join4"]);
+const displays = ref([]);
 
 function updateDisplay(layer) {
     if (displays.value.includes(layer)) {
@@ -14,6 +14,12 @@ function updateDisplay(layer) {
 </script>
 
 <template>
+    <div class="intro-box">
+        <div class="intro-box-content">
+            <h2>Explore the map</h2>
+            <p class="no-margin-top">Tap range below to highlight nations on map. On the map, you can tap a nation to reveal its TFR.</p>
+        </div>
+    </div>
     <nav>
         <figure
             @click="$emit('toggleLayer', 'countries-join1'), updateDisplay('countries-join1')"
