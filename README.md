@@ -9,16 +9,16 @@ Project meets general accessibility (WACG) and cross-browser requirements. More 
 
 ## Project Screen Shots
 
-* Default view of map.
+* Intro explaining methods.
 ![screen shot of project](/screenshots/global-fertility-rates-screenshot1.png?s=600)
 
-* Map with some rates selected, and Australia clicked.
+* Map with some rates selected, and Brazil clicked.
 ![screen shot of project](/screenshots/global-fertility-rates-screenshot2.png?s=600)
 
-* Paginated nation rates.
+* Paginated list of all nations.
 ![screen shot of project](/screenshots/global-fertility-rates-screenshot3.png?s=600)
 
-* Regional averages, and search (with results for Peru).
+* List of regional averages, and search feature.
 ![screen shot of project](/screenshots/global-fertility-rates-screenshot4.png?s=600)
 
 ## Installation and Setup Instructions
