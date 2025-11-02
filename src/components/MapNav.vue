@@ -14,10 +14,12 @@ function updateDisplay(layer) {
 </script>
 
 <template>
-    <div class="intro-box">
-        <div class="intro-box-content">
-            <h2>Explore the map</h2>
-            <p class="no-margin-top">Tap a range below to highlight its nations on the map. On the map itself, you can tap a nation to reveal its TFR.</p>
+    <div class="map-caption">
+        <div class="map-caption-title">
+            <h2>World Map</h2>
+        </div>
+        <div class="map-caption-text">
+            <p class="no-margin-top">Total Fertility Rate (TFR) in nations around the world. Source: Central Intelligence Agency.</p>
         </div>
     </div>
     <nav>
