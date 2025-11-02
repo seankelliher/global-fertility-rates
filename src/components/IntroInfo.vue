@@ -8,7 +8,7 @@
 
             <p class="larger-txt larger-bottom">A method called <strong>Age-Specific Fertility Rate (ASFR)</strong> generally divides women of childbearing age into five-year bands (for example, 24 - 29) and measures the actual number of children they are producing in a year. ASFR is good at identifying patterns  such as if women are having children earlier or later in life.</p>
 
-            <p class="larger-txt">ASFR forms the basis of the <strong>Total Fertility Rate (TFR)</strong> method. TFR calculates the number of children a woman would have if she were to instantaneously progress through her childbearing years with the current ASFR for each age band. TFR is generally the measurement used to compare fertility rates among nations and is what we will use here. Our data comes from the Central Intelligence Agency (CIA).</p>
+            <p class="larger-txt">ASFR forms the basis of the <strong>Total Fertility Rate (TFR)</strong> method. TFR calculates the number of children a woman would have if she were to instantaneously progress through her childbearing years with the current ASFR for each age band. TFR is generally the measurement used to compare fertility rates among nations.</p>
         </div>
     </div>
 </template>
