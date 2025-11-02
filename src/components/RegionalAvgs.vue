@@ -60,6 +60,9 @@ function findAverages(nat) {
         <div class="title">
             <h2>Regional averages</h2>
         </div>
+        <div class="text">
+            <p class="no-margin-top">Total Fertility Rate (TFR) regional averages.</p>
+        </div>
         <table>
             <thead>
                 <tr>

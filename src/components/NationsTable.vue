@@ -54,6 +54,9 @@ onMounted(() => {
         <div class="title">
             <h2>All nations</h2>
         </div>
+        <div class="text">
+            <p class="no-margin-top">Total Fertility Rate (TFR) of all nations, low to high.</p>
+        </div>
         <table>
             <thead>
                 <tr>
