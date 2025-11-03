@@ -68,11 +68,11 @@ onMounted(() => {
             createMapLayer(matchVar, layerName, vis);
         }
         const loops = [
-            [0, 2.19, "#f2f0f7", rateCat1, "countries-join1", "none"],
-            [2.19, 2.99, "#fcae91", rateCat2, "countries-join2", "none"],
-            [2.99, 3.99, "#fb6a4a", rateCat3, "countries-join3", "none"],
-            [3.99, 4.99, "#de2d26", rateCat4, "countries-join4", "none"],
-            [4.99, 15.99, "#a50f15", rateCat5, "countries-join5", "none"], // 15.99 is safe high end.
+            [0, 2.19, "#f2f0f7", rateCat1, "countries-join1", "visible"], // visible vs none.
+            [2.19, 2.99, "#fcae91", rateCat2, "countries-join2", "visible"],
+            [2.99, 3.99, "#fb6a4a", rateCat3, "countries-join3", "visible"],
+            [3.99, 4.99, "#de2d26", rateCat4, "countries-join4", "visible"],
+            [4.99, 15.99, "#a50f15", rateCat5, "countries-join5", "visible"], // 15.99 is safe high end.
             [0, 0, "transparent", rateCat6, "countries-join6", "visible"] // no colors, for pop-ups.
         ];
 

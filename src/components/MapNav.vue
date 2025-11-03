@@ -2,7 +2,8 @@
 import { ref } from "vue";
 defineEmits(["toggleLayer"]);
 
-const displays = ref([]);
+// To display color shading by default, add "countries-joinX" here.
+const displays = ref(["countries-join1", "countries-join2", "countries-join3", "countries-join4", "countries-join5"]);
 
 function updateDisplay(layer) {
     if (displays.value.includes(layer)) {
